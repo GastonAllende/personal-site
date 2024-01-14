@@ -2,7 +2,10 @@ import Image from 'next/image'
 import Link from 'next/link';
 import Layout from './components/Layout';
 
-import profilePic from '../../public/images/developer-pic-1.png'
+//import profilePic from '../../public/images/developer-pic-1.png'
+import profilePic from '../../public/images/gaston-me.png'
+import { ArrowIcon } from './components/Icons';
+//import profilePic from '../../public/images/me-gaston.png'
 
 export default function Home() {
   return (
@@ -20,13 +23,22 @@ export default function Home() {
               As a skilled full-stack developer, I am dedicated to turning ideas into innovative web applications. 
 Explore my latest projects and articles, showcasing my expertise in React.js and web development.
               </p>
-              <div>
-                <Link href="/dummt.pdf" target='_blank'>Resume</Link>
-                <Link href="/dummt.pdf" target='_blank'>Contact</Link>
+              <div className='flex items-center self-start mt-2'>
+                <Link 
+                  className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
+                  hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark
+                  ' 
+                  href="/dummt.pdf" target='_blank'
+                  download={true}
+                  >Resume
+                  <ArrowIcon className='w-6 ml-1'></ArrowIcon>
+                  </Link>
+                <Link className='ml-4 text-lg font-medium capitalize text-dark underline' href="mailto:gaston.saavedra@me.com" target='_blank'>Contact</Link>
               </div>
             </div>
+
           </div>
-        </Layout>
+        </Layout> 
       </main>
   )
 }
