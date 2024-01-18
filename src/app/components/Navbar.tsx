@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
 				<CustomLink href='/' title='Home' className='mr-2' />
 				<CustomLink href='/about' title='About' className='mx-4'/>
 				<CustomLink href='/projects' title='Project' className='mx-4'/>
-				<CustomLink href='/articles' title='Articles' className='mx-4'/>
+			{/* 	<CustomLink href='/articles' title='Articles' className='mx-4'/> */}
 				<CustomLink href='/contact' title='Contact' className='mx-4'/>
 			</nav>
 

@@ -2,10 +2,10 @@ import Image from 'next/image'
 import Link from 'next/link';
 import Layout from './components/Layout';
 
-//import profilePic from '../../public/images/developer-pic-1.png'
-import profilePic from '../../public/images/gaston-me.png'
 import { ArrowIcon } from './components/Icons';
-//import profilePic from '../../public/images/me-gaston.png'
+import HireMe from './components/HireMe';
+
+import profilePic from '../../public/images/gaston-me.png'
 
 export default function Home() {
   return (
@@ -36,9 +36,9 @@ Explore my latest projects and articles, showcasing my expertise in React.js and
                 <Link className='ml-4 text-lg font-medium capitalize text-dark underline' href="mailto:gaston.saavedra@me.com" target='_blank'>Contact</Link>
               </div>
             </div>
-
           </div>
         </Layout> 
+        <HireMe/>
       </main>
   )
 }
