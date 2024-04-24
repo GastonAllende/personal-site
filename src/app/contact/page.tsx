@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Contact : React.FC<{children: string, className: string}> = (children, className) => {
+const Contact : React.FC = () => {
 		return (
 				<div>
-						<h1>About</h1>
+						<h1>Contact</h1>
 				</div>
 		)
 }
