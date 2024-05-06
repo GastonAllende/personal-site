@@ -1,9 +1,14 @@
+import Head from 'next/head';
 import React from 'react';
 
 const Contact : React.FC = () => {
-		return (
+		return (			
 				<div>
-						<h1>Contact</h1>
+					<Head>
+						<title>Contact</title>
+						<meta name="description" content="Contact page" />
+					</Head>
+					<h1>Contact</h1>
 				</div>
 		)
 }
