@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 import Layout from '../components/Layout';
 import profilePic from "../../../public/images/gaston-me.png";
+import Experience from '../components/Experience';
 
 const About: React.FC = () => {
 	return (
@@ -31,6 +32,7 @@ const About: React.FC = () => {
 								height={500} alt='Frontend developer' className='w-full h-auto' />
 						</div>
 					</div>
+					<Experience />
 				</Layout>
 			</main>
 		</>
