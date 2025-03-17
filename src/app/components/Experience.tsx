@@ -28,9 +28,18 @@ const Experience: React.FC = () => {
 				<div className='absolute left-8 top-0 w-[4px] h-full bg-dark origin-top'></div>
 
 				<ul className='w-full flex flex-col items-start justify-between ml-4'>
+
 					<Details
 						position='Frontend developer'
-						company='Bigspin'
+						company='Enity Bank Group AB'
+						companyLink='https://www.enity.com/'
+						time='2023-2024'
+						address='Stockholm, Sweden'
+						work='A lot of things'
+					/>
+					<Details
+						position='Frontend developer'
+						company='Xylem'
 						companyLink='www.gaston.com'
 						time='2023-2024'
 						address='Stockholm, Sweden'
@@ -38,7 +47,23 @@ const Experience: React.FC = () => {
 					/>
 					<Details
 						position='Frontend developer'
-						company='Bluestep'
+						company='Bigspin AB'
+						companyLink='www.gaston.com'
+						time='2023-2024'
+						address='Stockholm, Sweden'
+						work='A lot of things'
+					/>
+					<Details
+						position='System developer'
+						company='Handelsbanken'
+						companyLink='www.gaston.com'
+						time='2023-2024'
+						address='Stockholm, Sweden'
+						work='A lot of things'
+					/>
+					<Details
+						position='Frontend developer'
+						company='Bigspin'
 						companyLink='www.gaston.com'
 						time='2024-2026'
 						address='Stockholm, Sweden'
