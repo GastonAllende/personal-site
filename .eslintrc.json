@@ -1,3 +1,9 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "@next/next/no-img-element": "error",
+    "react/no-unescaped-entities": "error",
+    "prefer-const": "error",
+    "no-unused-vars": "warn"
+  }
 }
