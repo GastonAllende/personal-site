@@ -1,14 +1,16 @@
 import React from 'react';
 import ListIcon from './ListIcon';
 
-const Details: React.FC<{
+interface ExperienceData {
   position: string;
   company: string;
   companyLink: string;
   time: string;
   address: string;
   work: string;
-}> = ({ position, company, companyLink, time, address, work }) => {
+}
+
+const Details: React.FC<ExperienceData> = ({ position, company, companyLink, time, address, work }) => {
   return (
     <li className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between">
       <ListIcon />
@@ -30,6 +32,49 @@ const Details: React.FC<{
 };
 
 const Experience: React.FC = () => {
+  const experiences: ExperienceData[] = [
+    {
+      position: "Frontend developer",
+      company: "Enity Bank Group AB",
+      companyLink: "https://www.enity.com/",
+      time: "2023-2024",
+      address: "Stockholm, Sweden",
+      work: "A lot of things"
+    },
+    {
+      position: "Frontend developer",
+      company: "Xylem",
+      companyLink: "https://www.xylem.com/sv-se/",
+      time: "2023-2024",
+      address: "Stockholm, Sweden",
+      work: "A lot of things"
+    },
+    {
+      position: "Frontend developer",
+      company: "Bigspin AB",
+      companyLink: "www.gaston.com",
+      time: "2023-2024",
+      address: "Stockholm, Sweden",
+      work: "A lot of things"
+    },
+    {
+      position: "System developer",
+      company: "Handelsbanken",
+      companyLink: "www.gaston.com",
+      time: "2023-2024",
+      address: "Stockholm, Sweden",
+      work: "A lot of things"
+    },
+    {
+      position: "Frontend developer",
+      company: "Bigspin",
+      companyLink: "www.gaston.com",
+      time: "2024-2026",
+      address: "Stockholm, Sweden",
+      work: "A lot of things"
+    }
+  ];
+
   return (
     <div className="my-32">
       <h2 className="font-bold text-8xl mb-32 w-full text-center">Experience</h2>
@@ -37,46 +82,17 @@ const Experience: React.FC = () => {
         <div className="absolute left-8 top-0 w-[4px] h-full bg-dark origin-top"></div>
 
         <ul className="w-full flex flex-col items-start justify-between ml-4">
-          <Details
-            position="Frontend developer"
-            company="Enity Bank Group AB"
-            companyLink="https://www.enity.com/"
-            time="2023-2024"
-            address="Stockholm, Sweden"
-            work="A lot of things"
-          />
-          <Details
-            position="Frontend developer"
-            company="Xylem"
-            companyLink="https://www.xylem.com/sv-se/"
-            time="2023-2024"
-            address="Stockholm, Sweden"
-            work="A lot of things"
-          />
-          <Details
-            position="Frontend developer"
-            company="Bigspin AB"
-            companyLink="www.gaston.com"
-            time="2023-2024"
-            address="Stockholm, Sweden"
-            work="A lot of things"
-          />
-          <Details
-            position="System developer"
-            company="Handelsbanken"
-            companyLink="www.gaston.com"
-            time="2023-2024"
-            address="Stockholm, Sweden"
-            work="A lot of things"
-          />
-          <Details
-            position="Frontend developer"
-            company="Bigspin"
-            companyLink="www.gaston.com"
-            time="2024-2026"
-            address="Stockholm, Sweden"
-            work="A lot of things"
-          />
+          {experiences.map((exp, index) => (
+            <Details
+              key={index}
+              position={exp.position}
+              company={exp.company}
+              companyLink={exp.companyLink}
+              time={exp.time}
+              address={exp.address}
+              work={exp.work}
+            />
+          ))}
         </ul>
       </div>
     </div>

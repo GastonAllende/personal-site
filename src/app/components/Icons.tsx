@@ -64,7 +64,7 @@ export const ArrowIcon: React.FC<IconProps> = ({ className = '', ...rest }) => (
   </svg>
 );
 
-export const CircularText: React.FC<{ className?: string; rest?: any }> = ({ className = '', ...rest }) => (
+export const CircularText: React.FC<{ className?: string; rest?: any; }> = ({ className = '', ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="198px"

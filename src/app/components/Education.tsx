@@ -1,7 +1,14 @@
 import React from 'react';
 import ListIcon from './ListIcon';
 
-const Details: React.FC<{ position: string; time: string; address: string; work: string }> = ({
+interface EducationData {
+  position: string;
+  time: string;
+  address: string;
+  work: string;
+}
+
+const Details: React.FC<EducationData> = ({
   position,
   time,
   address,
@@ -22,6 +29,21 @@ const Details: React.FC<{ position: string; time: string; address: string; work:
 };
 
 const Education: React.FC = () => {
+  const educations: EducationData[] = [
+    {
+      position: "Frontend developer",
+      time: "2023-2024",
+      address: "Stockholm, Sweden",
+      work: "A lot of things"
+    },
+    {
+      position: "Frontend developer",
+      time: "2024-2026",
+      address: "Stockholm, Sweden",
+      work: "A lot of things"
+    }
+  ];
+
   return (
     <div className="my-32">
       <h2 className="font-bold text-8xl mb-32 w-full text-center">Education</h2>
@@ -29,8 +51,15 @@ const Education: React.FC = () => {
         <div className="absolute left-8 top-0 w-[4px] h-full bg-dark origin-top"></div>
 
         <ul className="w-full flex flex-col items-start justify-between ml-4">
-          <Details position="Frontend developer" time="2023-2024" address="Stockholm, Sweden" work="A lot of things" />
-          <Details position="Frontend developer" time="2024-2026" address="Stockholm, Sweden" work="A lot of things" />
+          {educations.map((edu, index) => (
+            <Details
+              key={index}
+              position={edu.position}
+              time={edu.time}
+              address={edu.address}
+              work={edu.work}
+            />
+          ))}
         </ul>
       </div>
     </div>
