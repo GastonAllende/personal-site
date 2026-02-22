@@ -1,14 +1,7 @@
 import type { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-montserrat',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gaston-allende.com'), // Replace with your actual domain
@@ -33,7 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} font-mont bg-light w-full min-h-screen`}>
+      <body className="font-mont bg-light w-full min-h-screen">
         <Navbar />
         {children}
         <Footer />

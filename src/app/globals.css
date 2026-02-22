@@ -1,3 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-mont: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --color-dark: #1b1b1b;
+  --color-light: #f5f5f5;
+  --color-primary: #b63e96;
+  --color-primaryDark: #58e6d9;
+  --animate-spin-slow: spin 10s linear infinite;
+}
