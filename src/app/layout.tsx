@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { ThemeProvider } from './components/ThemeProvider';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gaston-allende.com'), // Replace with your actual domain
+  metadataBase: new URL('https://gaston-allende.com'),
   title: {
     default: 'Gaston Allende - Frontend Developer',
     template: '%s | Gaston Allende',
@@ -23,13 +24,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode; }) {
   return (
-    <html lang="en">
-      <body className="font-mont bg-light w-full min-h-screen">
-        <Navbar />
-        {children}
-        <Footer />
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-white dark:bg-gray-950 min-h-screen transition-colors duration-300" suppressHydrationWarning>
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

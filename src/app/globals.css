@@ -1,10 +1,18 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-mont: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --font-mont: 'Montserrat', 'Avenir Next', 'Segoe UI', sans-serif;
   --color-dark: #1b1b1b;
   --color-light: #f5f5f5;
   --color-primary: #b63e96;
   --color-primaryDark: #58e6d9;
   --animate-spin-slow: spin 10s linear infinite;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 }
