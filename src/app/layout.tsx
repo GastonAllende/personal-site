@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import { ThemeProvider } from './components/ThemeProvider';
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gastonallende.com'),
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
       <body className="bg-white dark:bg-gray-950 min-h-screen transition-colors duration-300" suppressHydrationWarning>
         <ThemeProvider>
           <Analytics />
+          <SpeedInsights />
           <Navbar />
           {children}
           <Footer />
