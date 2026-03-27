@@ -124,7 +124,7 @@ export function ProjectsContent() {
 							className="group cursor-pointer"
 						>
 							<div className="rounded-3xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-								<div className="aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-gray-700">
+								<div className="aspect-4/3 overflow-hidden bg-gray-100 dark:bg-gray-700">
 									<motion.img
 										whileHover={{ scale: 1.05 }}
 										transition={{ duration: 0.4 }}

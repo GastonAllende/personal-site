@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import { Mail, ArrowUp } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, TwitterIcon } from './BrandIcons';
+import { GithubIcon, LinkedinIcon } from './BrandIcons';
 
 const footerLinks = {
   Navigation: [
@@ -15,7 +15,7 @@ const footerLinks = {
   Connect: [
     { label: 'GitHub', url: 'https://github.com/GastonAllende' },
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/gaston-allende-520b1734' },
-    { label: 'Twitter', url: 'https://twitter.com' },
+    // { label: 'Twitter', url: 'https://twitter.com' },
     { label: 'Email', url: 'mailto:gaston.saavedra@me.com' },
   ],
 };
@@ -23,7 +23,7 @@ const footerLinks = {
 const socialLinks = [
   { icon: GithubIcon, label: 'GitHub', url: 'https://github.com/GastonAllende' },
   { icon: LinkedinIcon, label: 'LinkedIn', url: 'https://www.linkedin.com/in/gaston-allende-520b1734' },
-  { icon: TwitterIcon, label: 'Twitter', url: 'https://twitter.com' },
+  // { icon: TwitterIcon, label: 'Twitter', url: 'https://twitter.com' },
   { icon: Mail, label: 'Email', url: 'mailto:gaston.saavedra@me.com' },
 ];
 
@@ -31,8 +31,8 @@ const Footer: React.FC = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+    <footer className="relative bg-linear-to-br from-gray-900 via-black to-gray-900 text-white">
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">

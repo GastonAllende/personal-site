@@ -82,7 +82,7 @@ export function ContactContent() {
 									transition={{ delay: 0.4 + index * 0.1, duration: 0.8 }}
 									className="flex items-center gap-4"
 								>
-									<div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center">
+									<div className="w-12 h-12 rounded-2xl bg-linear-to-br from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-700 flex items-center justify-center">
 										<item.icon className="w-5 h-5 text-black dark:text-white" />
 									</div>
 									<div>
@@ -132,7 +132,7 @@ export function ContactContent() {
 					>
 						<form
 							onSubmit={handleSubmit}
-							className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 p-8 md:p-12 rounded-3xl border border-gray-100 dark:border-gray-700"
+							className="bg-linear-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 p-8 md:p-12 rounded-3xl border border-gray-100 dark:border-gray-700"
 						>
 							<div className="space-y-6">
 								<div>

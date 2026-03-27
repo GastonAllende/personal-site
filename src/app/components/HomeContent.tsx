@@ -8,18 +8,18 @@ import { useRef } from 'react';
 const features = [
 	{
 		icon: Sparkles,
-		title: 'Creative Design',
-		description: 'Crafting beautiful and intuitive user experiences with attention to every detail.',
+		title: 'Frontend Expertise',
+		description: 'Specialized in Angular and TypeScript, building scalable enterprise applications with clean, maintainable architecture.',
 	},
 	{
 		icon: Zap,
-		title: 'Fast Performance',
-		description: 'Optimized builds using modern tooling for speed and efficiency.',
+		title: 'Full-Stack Mindset',
+		description: 'Backend experience with C# and .NET, bridging the gap between UI and systems to build better end-to-end solutions.',
 	},
 	{
 		icon: Target,
-		title: 'Precision',
-		description: 'Clean, maintainable code driven by best practices and real-world experience.',
+		title: 'Long-Term Quality',
+		description: 'Focused on stability and maintainability over quick fixes, especially in financial sector environments.',
 	},
 ];
 
@@ -35,19 +35,19 @@ export function HomeContent() {
 		<div className="pt-16">
 			{/* Hero Section */}
 			<section ref={heroRef} className="min-h-screen flex items-center justify-center relative overflow-hidden">
-				<div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900" />
+				<div className="absolute inset-0 bg-linear-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900" />
 
 				{/* Animated Background Blobs */}
 				<div className="absolute inset-0 z-0">
 					<motion.div
 						animate={{ y: [0, -30, 0] }}
 						transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-						className="absolute top-1/4 right-1/4 w-72 h-72 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"
+						className="absolute top-1/4 right-1/4 w-72 h-72 bg-linear-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"
 					/>
 					<motion.div
 						animate={{ y: [0, 30, 0] }}
 						transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
-						className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-pink-400/20 to-orange-400/20 rounded-full blur-3xl"
+						className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-linear-to-br from-pink-400/20 to-orange-400/20 rounded-full blur-3xl"
 					/>
 				</div>
 
@@ -73,7 +73,7 @@ export function HomeContent() {
 						transition={{ delay: 0.5, duration: 0.8 }}
 						className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto"
 					>
-						Building exceptional digital experiences with modern technologies and over 10 years of industry expertise.
+						Building reliable digital experiences with modern technologies and over 12 years of industry expertise.
 					</motion.p>
 
 					<motion.div
@@ -153,7 +153,7 @@ export function HomeContent() {
 								viewport={{ once: true, margin: '-100px' }}
 								transition={{ delay: index * 0.2, duration: 0.8 }}
 								whileHover={{ y: -5 }}
-								className="p-8 rounded-3xl bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-800 hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300"
+								className="p-8 rounded-3xl bg-linear-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-800 hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300"
 							>
 								<div className="w-14 h-14 rounded-2xl bg-black dark:bg-white flex items-center justify-center mb-6">
 									<feature.icon className="w-7 h-7 text-white dark:text-black" />
@@ -167,7 +167,7 @@ export function HomeContent() {
 			</section>
 
 			{/* CTA Section */}
-			<section className="py-32 px-6 bg-gradient-to-br from-gray-900 to-black text-white">
+			<section className="py-32 px-6 bg-linear-to-br from-gray-900 to-black text-white">
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
 					whileInView={{ opacity: 1, y: 0 }}
