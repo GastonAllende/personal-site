@@ -1,0 +1,275 @@
+{
+	"Navbar": {
+		"home": "HEM",
+		"about": "OM MIG",
+		"projects": "PROJEKT",
+		"contact": "KONTAKT",
+		"toggleTheme": "Byt tema",
+		"toggleMenu": "Växla meny"
+	},
+	"Home": {
+		"metadata": {
+			"title": "Gaston Allende - Frontend-utvecklare",
+			"description": "Passionerad frontend-utvecklare med kunskaper inom backend och design. Över 10 års branscherfarenhet."
+		},
+		"hero": {
+			"title": "Frontend-utvecklare",
+			"subtitle": "Bygger pålitliga digitala upplevelser med modern teknik och över 12 års branscherfarenhet.",
+			"viewProjects": "Se projekt",
+			"getInTouch": "Kontakta mig"
+		},
+		"features": {
+			"title": "Vad jag gör",
+			"subtitle": "Kombinerar kreativitet med teknisk expertis",
+			"items": [
+				{
+					"title": "Frontend-expertis",
+					"description": "Specialiserad inom Angular och TypeScript, bygger skalbara företagsapplikationer med ren och underhållbar arkitektur."
+				},
+				{
+					"title": "Fullstack-tänk",
+					"description": "Backend-erfarenhet med C# och .NET, överbryggar gapet mellan UI och system för att bygga bättre helhetslösningar."
+				},
+				{
+					"title": "Långsiktig kvalitet",
+					"description": "Fokus på stabilitet och underhållbarhet framför snabba lösningar, särskilt i finanssektorn."
+				}
+			]
+		},
+		"cta": {
+			"title": "Låt oss arbeta tillsammans",
+			"subtitle": "Redo att förverkliga dina idéer? Låt oss skapa något fantastiskt.",
+			"button": "Starta en konversation"
+		}
+	},
+	"About": {
+		"metadata": {
+			"title": "Om mig - Gaston Allende",
+			"description": "Läs mer om Gaston Allende, hans bakgrund, erfarenhet och utbildning inom frontend-utveckling."
+		},
+		"hero": {
+			"title": "Om mig",
+			"subtitle": "Frontend-specialist med 12+ års erfarenhet av att bygga företagsapplikationer, nu med fokus på AI och Python"
+		},
+		"bio": {
+			"title": "Bygger för framtiden",
+			"paragraphs": [
+				"Jag har arbetat som utvecklare i över 12 år, huvudsakligen med frontend-utveckling i Angular i företagsmiljöer. Med tiden har jag även utforskat backend-sidan med C# och .NET, vilket har gett mig en djupare förståelse för hur system hänger ihop bortom enbart UI.",
+				"Idag arbetar jag inom finanssektorn med att bygga stabila och underhållbara applikationer, och jag trivs i team som värdesätter långsiktig kvalitet framför snabba lösningar.",
+				"På senare tid har jag börjat röra mig mot AI och generativ AI, lär mig Python och bygger gradvis upp kunskap inom det området, steg för steg — särskilt i skärningspunkten mellan frontend, backend och AI."
+			],
+			"yearsExperience": "Års erfarenhet"
+		},
+		"skills": {
+			"title": "Kompetenser & expertis",
+			"subtitle": "Verktyg och tekniker jag arbetar med",
+			"categories": [
+				{
+					"title": "Frontend",
+					"items": ["Angular", "TypeScript", "RxJS", "React"]
+				},
+				{
+					"title": "Backend & verktyg",
+					"items": ["C#", "REST APIs", "Docker", "Azure DevOps"]
+				},
+				{
+					"title": "AI & Python",
+					"items": ["Python", "Generative AI", "LLMs", "Machine Learning"]
+				},
+				{
+					"title": "Metodik",
+					"items": ["Agile / Scrum", "Kanban", "Git", "Jira"]
+				}
+			]
+		},
+		"experience": {
+			"title": "Erfarenhet",
+			"items": [
+				{
+					"year": "Jan 2026 - Pågående",
+					"title": "Systemutvecklare (frontend-fokus)",
+					"company": "Enity Bank Group",
+					"description": "Leder frontend-utveckling med Angular och TypeScript i finanssektorn, med fokus på stabila och underhållbara företagsapplikationer."
+				},
+				{
+					"year": "Maj 2023 - Dec 2025",
+					"title": "Frontend-utvecklare",
+					"company": "Enity Bank Group",
+					"description": "Byggde och underhöll användarriktade funktioner för bankapplikationer med Angular, TypeScript, RxJS och Angular Material."
+				},
+				{
+					"year": "Jan 2023 - Maj 2023",
+					"title": "Frontend-utvecklare (konsult)",
+					"company": "Invidem",
+					"description": "Konsultuppdrag med leverans av frontend-lösningar i Angular och TypeScript."
+				},
+				{
+					"year": "Jan 2020 - Maj 2023",
+					"title": "Frontend-utvecklare",
+					"company": "FreeCode AB",
+					"description": "Utvecklade frontend-applikationer för flera kunder inklusive Xylem Water Solutions, med Angular och TypeScript i en agil miljö."
+				},
+				{
+					"year": "Feb 2020 - Jan 2023",
+					"title": "Frontend-utvecklare (konsult)",
+					"company": "Xylem Water Solutions Sweden",
+					"description": "Konsultuppdrag med att bygga och underhålla frontend-funktioner med Angular, RxJS och REST APIs."
+				},
+				{
+					"year": "Apr 2017 - Jan 2020",
+					"title": "Systemutvecklare",
+					"company": "Handelsbanken",
+					"description": "Fullstack-utveckling i bankmiljö med AngularJS, C#, SQL DB2 och IBM WebSphere-teknologier."
+				},
+				{
+					"year": "Dec 2015 - Apr 2017",
+					"title": "Frontend-utvecklare",
+					"company": "Bigspin",
+					"description": "Frontend-utveckling med JavaScript, AngularJS, HTML, CSS och SASS för digitala produkter."
+				},
+				{
+					"year": "Jan 2015 - Dec 2015",
+					"title": "Frontend-utvecklare (frilans)",
+					"company": "Yid - Digitalbyrå",
+					"description": "Frilansande frontend-utveckling med WordPress, jQuery, HTML och CSS för kundwebbplatser."
+				},
+				{
+					"year": "Sep 2014 - Nov 2014",
+					"title": "Frontend-utvecklare",
+					"company": "Klirr Stockholm AB",
+					"description": "Frontend-utveckling med HTML, CSS, JavaScript och jQuery."
+				},
+				{
+					"year": "Jul 2014 - Aug 2014",
+					"title": "Frontend-utvecklare",
+					"company": "Situs Media AB",
+					"description": "Frontend-utveckling med HTML, CSS, PHP och JavaScript."
+				},
+				{
+					"year": "Apr 2014 - Jun 2014",
+					"title": "Frontend-utvecklare",
+					"company": "Situs Media AB",
+					"description": "Frontend-utveckling med HTML, CSS, PHP och JavaScript."
+				}
+			]
+		},
+		"education": {
+			"title": "Utbildning",
+			"items": [
+				{
+					"period": "Sep 2024 - Nov 2024",
+					"school": "Nackademin",
+					"degree": "Prompt Engineering och Generative AI för utvecklare",
+					"highlights": ["Prompt Engineering", "Generative AI", "LLMs"]
+				},
+				{
+					"period": "2016 - 2018",
+					"school": "Lernia Yrkeshögskola",
+					"degree": "Backend-utveckling - C#/.NET",
+					"highlights": ["C#", ".NET", "RESTful API", "SQL Server", "Agila metoder"]
+				},
+				{
+					"period": "2013 - 2015",
+					"school": "JENSEN yrkeshögskola",
+					"degree": "Webbutveckling",
+					"highlights": ["JavaScript", "Node.js", "HTML/CSS/SASS", "PHP", "MySQL", "Responsiv design"]
+				},
+				{
+					"period": "2012 - 2013",
+					"school": "Jensen Education / Komvux",
+					"degree": "Programmering",
+					"highlights": ["Programmeringsgrunder"]
+				}
+			]
+		}
+	},
+	"Projects": {
+		"metadata": {
+			"title": "Projekt - Gaston Allende",
+			"description": "Utforska projekt byggda av Gaston Allende — från webbappar till designsystem."
+		},
+		"header": {
+			"title": "Utvalda projekt",
+			"subtitle": "En samling av mina senaste arbeten inom webbutveckling, mobilappar och innovativa digitala lösningar"
+		},
+		"liveDemo": "Live-demo",
+		"items": [
+			{
+				"title": "E-handelsplattform",
+				"category": "Webbutveckling",
+				"description": "En modern e-handelslösning med realtidslager",
+				"fullDescription": "Byggde en omfattande e-handelsplattform med realtidshantering av lager, säker betalningshantering och en intuitiv administratörspanel. Plattformen hanterar tusentals transaktioner dagligen med 99,9 % drifttid."
+			},
+			{
+				"title": "Designsystem",
+				"category": "UI/UX-design",
+				"description": "Omfattande designsystem för företagsapplikationer",
+				"fullDescription": "Skapade ett skalbart designsystem som används i flera produkter, med 100+ komponenter, omfattande dokumentation och riktlinjer för tillgänglighet. Minskade tiden från design till utveckling med 40 %."
+			},
+			{
+				"title": "Analyspanel",
+				"category": "Datavisualisering",
+				"description": "Realtidsanalys med interaktiva visualiseringar",
+				"fullDescription": "Byggde en avancerad analyspanel som bearbetar miljontals datapunkter i realtid. Innehåller anpassningsbara widgets, automatiserad rapportering och prediktiv analys driven av moderna algoritmer."
+			},
+			{
+				"title": "Social plattform",
+				"category": "Fullstack",
+				"description": "Nästa generations sociala nätverksupplevelse",
+				"fullDescription": "Lanserade en social medieplattform med innovativa funktioner inklusive AI-drivna innehållsrekommendationer, livestreaming och avancerade integritetskontroller. Skalades för att stödja 50 000+ samtidiga användare."
+			},
+			{
+				"title": "Mobilbankapp",
+				"category": "Mobilutveckling",
+				"description": "Säker mobilbank med biometrisk autentisering",
+				"fullDescription": "Utvecklade en funktionsrik mobilbankapplikation med avancerade säkerhetsfunktioner inklusive biometrisk autentisering, krypterade transaktioner och bedrägeridetektering i realtid."
+			},
+			{
+				"title": "Komponentbibliotek",
+				"category": "Öppen källkod",
+				"description": "Återanvändbart React-komponentbibliotek med fullt TypeScript-stöd",
+				"fullDescription": "Utvecklade och publicerade ett React-komponentbibliotek med öppen källkod, fullt TypeScript-stöd, omfattande dokumentation och en Storybook-playground. Används av flera team i olika projekt."
+			}
+		]
+	},
+	"Contact": {
+		"metadata": {
+			"title": "Kontakt - Gaston Allende",
+			"description": "Kontakta Gaston Allende för möjligheter inom frontend-utveckling och samarbeten."
+		},
+		"header": {
+			"title": "Hör av dig",
+			"subtitle": "Har du ett projekt i åtanke? Låt oss diskutera hur vi kan samarbeta för att förverkliga dina idéer."
+		},
+		"info": {
+			"title": "Låt oss starta en konversation",
+			"description": "Oavsett om du har en fråga, vill starta ett projekt eller helt enkelt vill ta kontakt, tveka inte att höra av dig. Jag är alltid öppen för att diskutera nya möjligheter och idéer.",
+			"email": "E-post",
+			"location": "Plats",
+			"followMe": "Följ mig"
+		},
+		"form": {
+			"name": "Namn",
+			"namePlaceholder": "Ditt namn",
+			"email": "E-post",
+			"emailPlaceholder": "din@epost.se",
+			"subject": "Ämne",
+			"subjectPlaceholder": "Projektförfrågan",
+			"message": "Meddelande",
+			"messagePlaceholder": "Berätta om ditt projekt...",
+			"send": "Skicka meddelande",
+			"sent": "Meddelande skickat!"
+		}
+	},
+	"Footer": {
+		"tagline": "Skapar enastående digitala upplevelser med passion och precision i över 10 år.",
+		"navigation": "Navigation",
+		"connect": "Kontakt",
+		"home": "Hem",
+		"about": "Om mig",
+		"projects": "Projekt",
+		"contact": "Kontakt",
+		"copyright": "© {year} Gaston Allende. Alla rättigheter förbehållna.",
+		"scrollToTop": "Scrolla till toppen"
+	}
+}

@@ -1,34 +1,38 @@
 'use client';
 
-import Link from 'next/link';
 import { motion } from 'motion/react';
 import { Mail, ArrowUp } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './BrandIcons';
-
-const footerLinks = {
-  Navigation: [
-    { label: 'Home', path: '/' },
-    { label: 'About', path: '/about' },
-    { label: 'Projects', path: '/projects' },
-    { label: 'Contact', path: '/contact' },
-  ],
-  Connect: [
-    { label: 'GitHub', url: 'https://github.com/GastonAllende' },
-    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/gaston-allende-520b1734' },
-    // { label: 'Twitter', url: 'https://twitter.com' },
-    { label: 'Email', url: 'mailto:gaston.saavedra@me.com' },
-  ],
-};
+import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 
 const socialLinks = [
   { icon: GithubIcon, label: 'GitHub', url: 'https://github.com/GastonAllende' },
   { icon: LinkedinIcon, label: 'LinkedIn', url: 'https://www.linkedin.com/in/gaston-allende-520b1734' },
-  // { icon: TwitterIcon, label: 'Twitter', url: 'https://twitter.com' },
   { icon: Mail, label: 'Email', url: 'mailto:gaston.saavedra@me.com' },
 ];
 
 const Footer: React.FC = () => {
+  const t = useTranslations('Footer');
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const navLinks = [
+    { label: t('home'), path: '/' as const },
+    { label: t('about'), path: '/about' as const },
+    { label: t('projects'), path: '/projects' as const },
+    { label: t('contact'), path: '/contact' as const },
+  ];
+
+  const connectLinks = [
+    { label: 'GitHub', url: 'https://github.com/GastonAllende' },
+    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/gaston-allende-520b1734' },
+    { label: 'Email', url: 'mailto:gaston.saavedra@me.com' },
+  ];
+
+  const footerSections = [
+    { title: t('navigation'), links: navLinks },
+    { title: t('connect'), links: connectLinks },
+  ];
 
   return (
     <footer className="relative bg-linear-to-br from-gray-900 via-black to-gray-900 text-white">
@@ -45,7 +49,7 @@ const Footer: React.FC = () => {
           >
             <h3 className="text-2xl mb-4 font-medium">Gaston Allende</h3>
             <p className="text-gray-400 mb-6">
-              Creating exceptional digital experiences with passion and precision for over 10 years.
+              {t('tagline')}
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social, index) => (
@@ -66,17 +70,17 @@ const Footer: React.FC = () => {
           </motion.div>
 
           {/* Links */}
-          {Object.entries(footerLinks).map(([title, links], sectionIndex) => (
+          {footerSections.map((section, sectionIndex) => (
             <motion.div
-              key={title}
+              key={section.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: (sectionIndex + 1) * 0.1 }}
             >
-              <h4 className="text-sm uppercase tracking-wider text-gray-400 mb-4">{title}</h4>
+              <h4 className="text-sm uppercase tracking-wider text-gray-400 mb-4">{section.title}</h4>
               <ul className="space-y-3">
-                {links.map((link, index) => (
+                {section.links.map((link, index) => (
                   <li key={index}>
                     {'path' in link ? (
                       <Link href={link.path}>
@@ -107,14 +111,14 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Gaston Allende. All rights reserved.
+            {t('copyright', { year: new Date().getFullYear() })}
           </p>
           <motion.button
             onClick={scrollToTop}
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.95 }}
             className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
-            aria-label="Scroll to top"
+            aria-label={t('scrollToTop')}
           >
             <ArrowUp className="w-4 h-4" />
           </motion.button>
@@ -125,4 +129,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-

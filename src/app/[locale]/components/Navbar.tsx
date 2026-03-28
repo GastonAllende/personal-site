@@ -1,24 +1,37 @@
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence, useScroll, useSpring } from 'motion/react';
 import { useEffect, useState } from 'react';
-import { Sun, Moon, Menu, X } from 'lucide-react';
+import { Sun, Moon, Menu, X, Globe } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
+import { Link } from '@/i18n/navigation';
+import { useTranslations, useLocale } from 'next-intl';
+import { routing } from '@/i18n/routing';
+import { useRouter } from '@/i18n/navigation';
 
-const navItems = [
-	{ path: '/', label: 'HOME' },
-	{ path: '/about', label: 'ABOUT' },
-	{ path: '/projects', label: 'PROJECTS' },
-	{ path: '/contact', label: 'CONTACT' },
-];
+const localeLabels: Record<string, string> = {
+	en: 'EN',
+	sv: 'SV',
+	es: 'ES',
+};
 
 const Navbar: React.FC = () => {
+	const t = useTranslations('Navbar');
+	const locale = useLocale();
+	const router = useRouter();
 	const pathname = usePathname();
 	const [scrolled, setScrolled] = useState(false);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+	const [langMenuOpen, setLangMenuOpen] = useState(false);
 	const { theme, toggleTheme } = useTheme();
+
+	const navItems = [
+		{ path: '/' as const, label: t('home') },
+		{ path: '/about' as const, label: t('about') },
+		{ path: '/projects' as const, label: t('projects') },
+		{ path: '/contact' as const, label: t('contact') },
+	];
 
 	const { scrollYProgress } = useScroll();
 	const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
@@ -28,6 +41,14 @@ const Navbar: React.FC = () => {
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
+
+	// Strip locale prefix from pathname for active link matching
+	const pathnameWithoutLocale = pathname.replace(new RegExp(`^/${locale}`), '') || '/';
+
+	const switchLocale = (newLocale: string) => {
+		router.replace(pathnameWithoutLocale as '/', { locale: newLocale });
+		setLangMenuOpen(false);
+	};
 
 	return (
 		<>
@@ -60,7 +81,7 @@ const Navbar: React.FC = () => {
 						{/* Desktop Navigation */}
 						<div className="hidden md:flex items-center gap-8">
 							{navItems.map((item) => {
-								const isActive = pathname === item.path;
+								const isActive = pathnameWithoutLocale === item.path;
 								return (
 									<Link key={item.path} href={item.path}>
 										<motion.div whileHover={{ scale: 1.05 }} className="relative">
@@ -84,13 +105,49 @@ const Navbar: React.FC = () => {
 								);
 							})}
 
+							{/* Language Switcher */}
+							<div className="relative">
+								<motion.button
+									onClick={() => setLangMenuOpen(!langMenuOpen)}
+									whileHover={{ scale: 1.05 }}
+									whileTap={{ scale: 0.95 }}
+									className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+									aria-label="Change language"
+								>
+									<Globe className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+								</motion.button>
+								<AnimatePresence>
+									{langMenuOpen && (
+										<motion.div
+											initial={{ opacity: 0, y: 8 }}
+											animate={{ opacity: 1, y: 0 }}
+											exit={{ opacity: 0, y: 8 }}
+											className="absolute right-0 mt-2 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden"
+										>
+											{routing.locales.map((loc) => (
+												<button
+													key={loc}
+													onClick={() => switchLocale(loc)}
+													className={`block w-full px-4 py-2 text-sm text-left transition-colors ${locale === loc
+														? 'bg-gray-100 dark:bg-gray-700 text-black dark:text-white font-medium'
+														: 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700'
+														}`}
+												>
+													{localeLabels[loc]}
+												</button>
+											))}
+										</motion.div>
+									)}
+								</AnimatePresence>
+							</div>
+
 							{/* Theme Toggle */}
 							<motion.button
 								onClick={toggleTheme}
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}
 								className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-								aria-label="Toggle theme"
+								aria-label={t('toggleTheme')}
 							>
 								<motion.div
 									initial={false}
@@ -108,11 +165,46 @@ const Navbar: React.FC = () => {
 
 						{/* Mobile Header Buttons */}
 						<div className="flex md:hidden items-center gap-4">
+							{/* Mobile Language Switcher */}
+							<div className="relative">
+								<motion.button
+									onClick={() => setLangMenuOpen(!langMenuOpen)}
+									whileTap={{ scale: 0.95 }}
+									className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center"
+									aria-label="Change language"
+								>
+									<Globe className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+								</motion.button>
+								<AnimatePresence>
+									{langMenuOpen && (
+										<motion.div
+											initial={{ opacity: 0, y: 8 }}
+											animate={{ opacity: 1, y: 0 }}
+											exit={{ opacity: 0, y: 8 }}
+											className="absolute right-0 mt-2 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden z-50"
+										>
+											{routing.locales.map((loc) => (
+												<button
+													key={loc}
+													onClick={() => switchLocale(loc)}
+													className={`block w-full px-4 py-2 text-sm text-left transition-colors ${locale === loc
+														? 'bg-gray-100 dark:bg-gray-700 text-black dark:text-white font-medium'
+														: 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700'
+														}`}
+												>
+													{localeLabels[loc]}
+												</button>
+											))}
+										</motion.div>
+									)}
+								</AnimatePresence>
+							</div>
+
 							<motion.button
 								onClick={toggleTheme}
 								whileTap={{ scale: 0.95 }}
 								className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center"
-								aria-label="Toggle theme"
+								aria-label={t('toggleTheme')}
 							>
 								{theme === 'light' ? (
 									<Moon className="w-4 h-4 text-gray-700" />
@@ -125,7 +217,7 @@ const Navbar: React.FC = () => {
 								onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
 								whileTap={{ scale: 0.95 }}
 								className="w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center"
-								aria-label="Toggle menu"
+								aria-label={t('toggleMenu')}
 							>
 								{mobileMenuOpen ? (
 									<X className="w-5 h-5 dark:text-white" />
@@ -150,7 +242,7 @@ const Navbar: React.FC = () => {
 					>
 						<div className="flex flex-col items-center justify-center h-full gap-8">
 							{navItems.map((item, index) => {
-								const isActive = pathname === item.path;
+								const isActive = pathnameWithoutLocale === item.path;
 								return (
 									<Link key={item.path} href={item.path} onClick={() => setMobileMenuOpen(false)}>
 										<motion.div
@@ -180,4 +272,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-

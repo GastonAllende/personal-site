@@ -5,11 +5,11 @@ import { useState } from 'react';
 import { X, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import { GithubIcon } from './BrandIcons';
+import { useTranslations } from 'next-intl';
 
 const MotionImage = motion(Image);
 
 interface Project {
-	id: number;
 	title: string;
 	category: string;
 	description: string;
@@ -20,70 +20,34 @@ interface Project {
 	github?: string;
 }
 
-const projects: Project[] = [
+const projectMeta = [
 	{
-		id: 1,
-		title: 'E-Commerce Platform',
-		category: 'Web Development',
-		description: 'A modern e-commerce solution with real-time inventory',
-		fullDescription:
-			'Built a comprehensive e-commerce platform featuring real-time inventory management, secure payment processing, and an intuitive admin dashboard. The platform handles thousands of transactions daily with 99.9% uptime.',
 		image: 'https://images.unsplash.com/photo-1707836868495-3307d371aba4?w=800&q=80',
 		technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'AWS'],
 		link: 'https://example.com',
 		github: 'https://github.com/GastonAllende',
 	},
 	{
-		id: 2,
-		title: 'Design System',
-		category: 'UI/UX Design',
-		description: 'Comprehensive design system for enterprise applications',
-		fullDescription:
-			'Created a scalable design system used across multiple products, featuring 100+ components, comprehensive documentation, and accessibility guidelines. Reduced design-to-development time by 40%.',
 		image: 'https://images.unsplash.com/photo-1760071744047-5542cbfda184?w=800&q=80',
 		technologies: ['Figma', 'React', 'Storybook', 'TypeScript'],
 		link: 'https://example.com',
 	},
 	{
-		id: 3,
-		title: 'Analytics Dashboard',
-		category: 'Data Visualization',
-		description: 'Real-time analytics with interactive visualizations',
-		fullDescription:
-			'Built an advanced analytics dashboard processing millions of data points in real-time. Features customizable widgets, automated reporting, and predictive analytics powered by modern algorithms.',
 		image: 'https://images.unsplash.com/photo-1557324232-b8917d3c3dcb?w=800&q=80',
 		technologies: ['React', 'TypeScript', 'D3.js', 'FastAPI', 'Redis'],
 		link: 'https://example.com',
 	},
 	{
-		id: 4,
-		title: 'Social Platform',
-		category: 'Full Stack',
-		description: 'Next-generation social networking experience',
-		fullDescription:
-			'Launched a social media platform with innovative features including AI-powered content recommendations, live streaming, and advanced privacy controls. Scaled to support 50,000+ concurrent users.',
 		image: 'https://images.unsplash.com/photo-1695067440629-b5e513976100?w=800&q=80',
 		technologies: ['Next.js', 'GraphQL', 'PostgreSQL', 'Redis', 'WebSocket'],
 		github: 'https://github.com/GastonAllende',
 	},
 	{
-		id: 5,
-		title: 'Mobile Banking App',
-		category: 'Mobile Development',
-		description: 'Secure mobile banking with biometric authentication',
-		fullDescription:
-			'Developed a feature-rich mobile banking application with advanced security features including biometric authentication, encrypted transactions, and real-time fraud detection.',
 		image: 'https://images.unsplash.com/photo-1658806283210-6d7330062704?w=800&q=80',
 		technologies: ['React Native', 'Firebase', 'Node.js', 'MongoDB'],
 		github: 'https://github.com/GastonAllende',
 	},
 	{
-		id: 6,
-		title: 'Component Library',
-		category: 'Open Source',
-		description: 'Reusable React component library with full TypeScript support',
-		fullDescription:
-			'Developed and published an open-source React component library with full TypeScript support, comprehensive documentation, and a Storybook playground. Used by multiple teams across different projects.',
 		image: 'https://images.unsplash.com/photo-1644337540803-2b2fb3cebf12?w=800&q=80',
 		technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Storybook'],
 		github: 'https://github.com/GastonAllende',
@@ -91,6 +55,19 @@ const projects: Project[] = [
 ];
 
 export function ProjectsContent() {
+	const t = useTranslations('Projects');
+	const translatedItems = t.raw('items') as Array<{
+		title: string;
+		category: string;
+		description: string;
+		fullDescription: string;
+	}>;
+
+	const projects: Project[] = translatedItems.map((item, i) => ({
+		...item,
+		...projectMeta[i],
+	}));
+
 	const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
 	return (
@@ -104,10 +81,10 @@ export function ProjectsContent() {
 					className="text-center mb-20"
 				>
 					<h1 className="text-6xl md:text-7xl tracking-tight mb-6 text-black dark:text-white font-medium">
-						Featured Projects
+						{t('header.title')}
 					</h1>
 					<p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-						A collection of my recent work spanning web development, mobile apps, and innovative digital solutions
+						{t('header.subtitle')}
 					</p>
 				</motion.div>
 
@@ -115,7 +92,7 @@ export function ProjectsContent() {
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{projects.map((project, index) => (
 						<motion.div
-							key={project.id}
+							key={index}
 							initial={{ opacity: 0, y: 30 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: index * 0.1, duration: 0.8 }}
@@ -227,7 +204,7 @@ export function ProjectsContent() {
 													className="flex items-center gap-2 px-6 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors"
 												>
 													<ExternalLink className="w-4 h-4" />
-													Live Demo
+													{t('liveDemo')}
 												</a>
 											)}
 											{selectedProject.github && (

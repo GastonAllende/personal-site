@@ -2,28 +2,15 @@
 
 import { motion, useScroll, useTransform } from 'motion/react';
 import { ArrowRight, Sparkles, Zap, Target } from 'lucide-react';
-import Link from 'next/link';
 import { useRef } from 'react';
+import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 
-const features = [
-	{
-		icon: Sparkles,
-		title: 'Frontend Expertise',
-		description: 'Specialized in Angular and TypeScript, building scalable enterprise applications with clean, maintainable architecture.',
-	},
-	{
-		icon: Zap,
-		title: 'Full-Stack Mindset',
-		description: 'Backend experience with C# and .NET, bridging the gap between UI and systems to build better end-to-end solutions.',
-	},
-	{
-		icon: Target,
-		title: 'Long-Term Quality',
-		description: 'Focused on stability and maintainability over quick fixes, especially in financial sector environments.',
-	},
-];
+const featureIcons = [Sparkles, Zap, Target];
 
 export function HomeContent() {
+	const t = useTranslations('Home');
+	const features = t.raw('features.items') as Array<{ title: string; description: string }>;
 	const heroRef = useRef<HTMLDivElement>(null);
 	const { scrollYProgress } = useScroll({
 		target: heroRef,
@@ -64,7 +51,7 @@ export function HomeContent() {
 						animate={{ opacity: 1 }}
 						transition={{ delay: 0.3, duration: 1 }}
 					>
-						Frontend Developer
+						{t('hero.title')}
 					</motion.h1>
 
 					<motion.p
@@ -73,7 +60,7 @@ export function HomeContent() {
 						transition={{ delay: 0.5, duration: 0.8 }}
 						className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto"
 					>
-						Building reliable digital experiences with modern technologies and over 12 years of industry expertise.
+						{t('hero.subtitle')}
 					</motion.p>
 
 					<motion.div
@@ -88,7 +75,7 @@ export function HomeContent() {
 								whileTap={{ scale: 0.95 }}
 								className="px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-full flex items-center gap-2 hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors"
 							>
-								View Projects
+								{t('hero.viewProjects')}
 								<ArrowRight className="w-5 h-5" />
 							</motion.button>
 						</Link>
@@ -99,7 +86,7 @@ export function HomeContent() {
 								whileTap={{ scale: 0.95 }}
 								className="px-8 py-4 border-2 border-black dark:border-white text-black dark:text-white rounded-full hover:bg-black dark:hover:bg-white hover:text-white dark:hover:text-black transition-colors"
 							>
-								Get in Touch
+								{t('hero.getInTouch')}
 							</motion.button>
 						</Link>
 					</motion.div>
@@ -137,31 +124,34 @@ export function HomeContent() {
 						className="text-center mb-20"
 					>
 						<h2 className="text-5xl md:text-6xl tracking-tight mb-4 text-black dark:text-white font-medium">
-							What I Do
+							{t('features.title')}
 						</h2>
 						<p className="text-xl text-gray-600 dark:text-gray-400">
-							Combining creativity with technical expertise
+							{t('features.subtitle')}
 						</p>
 					</motion.div>
 
 					<div className="grid md:grid-cols-3 gap-8">
-						{features.map((feature, index) => (
-							<motion.div
-								key={index}
-								initial={{ opacity: 0, y: 30 }}
-								whileInView={{ opacity: 1, y: 0 }}
-								viewport={{ once: true, margin: '-100px' }}
-								transition={{ delay: index * 0.2, duration: 0.8 }}
-								whileHover={{ y: -5 }}
-								className="p-8 rounded-3xl bg-linear-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-800 hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300"
-							>
-								<div className="w-14 h-14 rounded-2xl bg-black dark:bg-white flex items-center justify-center mb-6">
-									<feature.icon className="w-7 h-7 text-white dark:text-black" />
-								</div>
-								<h3 className="text-2xl mb-4 text-black dark:text-white">{feature.title}</h3>
-								<p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
-							</motion.div>
-						))}
+						{features.map((feature, index) => {
+							const Icon = featureIcons[index];
+							return (
+								<motion.div
+									key={index}
+									initial={{ opacity: 0, y: 30 }}
+									whileInView={{ opacity: 1, y: 0 }}
+									viewport={{ once: true, margin: '-100px' }}
+									transition={{ delay: index * 0.2, duration: 0.8 }}
+									whileHover={{ y: -5 }}
+									className="p-8 rounded-3xl bg-linear-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-800 hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300"
+								>
+									<div className="w-14 h-14 rounded-2xl bg-black dark:bg-white flex items-center justify-center mb-6">
+										<Icon className="w-7 h-7 text-white dark:text-black" />
+									</div>
+									<h3 className="text-2xl mb-4 text-black dark:text-white">{feature.title}</h3>
+									<p className="text-gray-600 dark:text-gray-400">{feature.description}</p>
+								</motion.div>
+							);
+						})}
 					</div>
 				</div>
 			</section>
@@ -175,9 +165,9 @@ export function HomeContent() {
 					transition={{ duration: 0.8 }}
 					className="max-w-4xl mx-auto text-center"
 				>
-					<h2 className="text-5xl md:text-6xl tracking-tight mb-6 font-medium">Let&#39;s Work Together</h2>
+					<h2 className="text-5xl md:text-6xl tracking-tight mb-6 font-medium">{t('cta.title')}</h2>
 					<p className="text-xl text-gray-400 mb-12">
-						Ready to bring your ideas to life? Let&#39;s create something amazing.
+						{t('cta.subtitle')}
 					</p>
 					<Link href="/contact">
 						<motion.button
@@ -185,7 +175,7 @@ export function HomeContent() {
 							whileTap={{ scale: 0.95 }}
 							className="px-10 py-5 bg-white text-black rounded-full text-lg hover:bg-gray-100 transition-colors flex items-center gap-2 mx-auto"
 						>
-							Start a Conversation
+							{t('cta.button')}
 							<ArrowRight className="w-5 h-5" />
 						</motion.button>
 					</Link>

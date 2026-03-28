@@ -4,20 +4,7 @@ import { motion } from 'motion/react';
 import { Mail, MapPin, Send } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from './BrandIcons';
 import { useState } from 'react';
-
-const contactInfo = [
-	{
-		icon: Mail,
-		label: 'Email',
-		value: 'gaston.saavedra@me.com',
-		link: 'mailto:gaston.saavedra@me.com',
-	},
-	{
-		icon: MapPin,
-		label: 'Location',
-		value: 'Argentina',
-	},
-];
+import { useTranslations } from 'next-intl';
 
 const socialLinks = [
 	{ icon: GithubIcon, label: 'GitHub', link: 'https://github.com/GastonAllende' },
@@ -26,8 +13,23 @@ const socialLinks = [
 ];
 
 export function ContactContent() {
+	const t = useTranslations('Contact');
 	const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
 	const [submitted, setSubmitted] = useState(false);
+
+	const contactInfo = [
+		{
+			icon: Mail,
+			label: t('info.email'),
+			value: 'gaston.saavedra@me.com',
+			link: 'mailto:gaston.saavedra@me.com',
+		},
+		{
+			icon: MapPin,
+			label: t('info.location'),
+			value: 'Argentina',
+		},
+	];
 
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
@@ -50,10 +52,10 @@ export function ContactContent() {
 					className="text-center mb-20"
 				>
 					<h1 className="text-6xl md:text-7xl tracking-tight mb-6 text-black dark:text-white font-medium">
-						Get In Touch
+						{t('header.title')}
 					</h1>
 					<p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-						Have a project in mind? Let&#39;s discuss how we can work together to bring your ideas to life.
+						{t('header.subtitle')}
 					</p>
 				</motion.div>
 
@@ -65,11 +67,10 @@ export function ContactContent() {
 						transition={{ delay: 0.2, duration: 0.8 }}
 					>
 						<h2 className="text-4xl tracking-tight mb-8 text-black dark:text-white font-medium">
-							Let&#39;s Start a Conversation
+							{t('info.title')}
 						</h2>
 						<p className="text-gray-600 dark:text-gray-400 mb-12">
-							Whether you have a question, want to start a project, or simply want to connect, feel free to reach out.
-							I&#39;m always open to discussing new opportunities and ideas.
+							{t('info.description')}
 						</p>
 
 						{/* Contact Details */}
@@ -104,7 +105,7 @@ export function ContactContent() {
 
 						{/* Social Links */}
 						<div>
-							<h3 className="text-sm uppercase tracking-wider text-gray-600 dark:text-gray-400 mb-4">Follow Me</h3>
+							<h3 className="text-sm uppercase tracking-wider text-gray-600 dark:text-gray-400 mb-4">{t('info.followMe')}</h3>
 							<div className="flex gap-4">
 								{socialLinks.map((social, index) => (
 									<motion.a
@@ -137,7 +138,7 @@ export function ContactContent() {
 							<div className="space-y-6">
 								<div>
 									<label htmlFor="name" className="block text-sm mb-2 text-gray-700 dark:text-gray-300">
-										Name
+										{t('form.name')}
 									</label>
 									<input
 										type="text"
@@ -147,13 +148,13 @@ export function ContactContent() {
 										onChange={handleChange}
 										required
 										className="w-full px-4 py-3 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 text-black dark:text-white focus:border-black dark:focus:border-white focus:outline-none transition-colors"
-										placeholder="Your name"
+										placeholder={t('form.namePlaceholder')}
 									/>
 								</div>
 
 								<div>
 									<label htmlFor="email" className="block text-sm mb-2 text-gray-700 dark:text-gray-300">
-										Email
+										{t('form.email')}
 									</label>
 									<input
 										type="email"
@@ -163,13 +164,13 @@ export function ContactContent() {
 										onChange={handleChange}
 										required
 										className="w-full px-4 py-3 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 text-black dark:text-white focus:border-black dark:focus:border-white focus:outline-none transition-colors"
-										placeholder="your@email.com"
+										placeholder={t('form.emailPlaceholder')}
 									/>
 								</div>
 
 								<div>
 									<label htmlFor="subject" className="block text-sm mb-2 text-gray-700 dark:text-gray-300">
-										Subject
+										{t('form.subject')}
 									</label>
 									<input
 										type="text"
@@ -179,13 +180,13 @@ export function ContactContent() {
 										onChange={handleChange}
 										required
 										className="w-full px-4 py-3 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 text-black dark:text-white focus:border-black dark:focus:border-white focus:outline-none transition-colors"
-										placeholder="Project inquiry"
+										placeholder={t('form.subjectPlaceholder')}
 									/>
 								</div>
 
 								<div>
 									<label htmlFor="message" className="block text-sm mb-2 text-gray-700 dark:text-gray-300">
-										Message
+										{t('form.message')}
 									</label>
 									<textarea
 										id="message"
@@ -195,7 +196,7 @@ export function ContactContent() {
 										required
 										rows={5}
 										className="w-full px-4 py-3 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 text-black dark:text-white focus:border-black dark:focus:border-white focus:outline-none transition-colors resize-none"
-										placeholder="Tell me about your project..."
+										placeholder={t('form.messagePlaceholder')}
 									/>
 								</div>
 
@@ -205,7 +206,7 @@ export function ContactContent() {
 									whileTap={{ scale: 0.98 }}
 									className="w-full py-4 bg-black dark:bg-white text-white dark:text-black rounded-2xl flex items-center justify-center gap-2 hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors font-medium"
 								>
-									{submitted ? 'Message Sent!' : 'Send Message'}
+									{submitted ? t('form.sent') : t('form.send')}
 									<Send className="w-4 h-4" />
 								</motion.button>
 							</div>
