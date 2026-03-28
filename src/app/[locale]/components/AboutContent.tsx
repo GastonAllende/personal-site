@@ -1,12 +1,12 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Code2, Server, Brain, Users, GraduationCap } from 'lucide-react';
+import { Code2, Server, ShieldCheck, Users, GraduationCap, Globe } from 'lucide-react';
 import Image from 'next/image';
 import profilePic from '../../../../public/images/gaston-me.png';
 import { useTranslations } from 'next-intl';
 
-const skillIcons = [Code2, Server, Brain, Users];
+const skillIcons = [Code2, Server, ShieldCheck, Users];
 
 export function AboutContent() {
 	const t = useTranslations('About');
@@ -24,6 +24,10 @@ export function AboutContent() {
 		highlights: string[];
 	}>;
 	const bioParagraphs = t.raw('bio.paragraphs') as string[];
+	const languageItems = t.raw('languages.items') as Array<{
+		language: string;
+		level: string;
+	}>;
 
 	return (
 		<div className="pt-32 pb-20">
@@ -209,6 +213,40 @@ export function AboutContent() {
 											</span>
 										))}
 									</div>
+								</div>
+							</motion.div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* Languages */}
+			<section className="px-6 py-20">
+				<div className="max-w-4xl mx-auto">
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.8 }}
+						className="text-center mb-12"
+					>
+						<h2 className="text-5xl tracking-tight mb-4 text-black dark:text-white font-medium">{t('languages.title')}</h2>
+					</motion.div>
+
+					<div className="flex flex-wrap justify-center gap-6">
+						{languageItems.map((item, index) => (
+							<motion.div
+								key={index}
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true }}
+								transition={{ delay: index * 0.1, duration: 0.6 }}
+								className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700"
+							>
+								<Globe className="w-5 h-5 text-gray-400 dark:text-gray-500" />
+								<div>
+									<span className="text-lg text-black dark:text-white font-medium">{item.language}</span>
+									<span className="text-gray-600 dark:text-gray-400 ml-2">— {item.level}</span>
 								</div>
 							</motion.div>
 						))}

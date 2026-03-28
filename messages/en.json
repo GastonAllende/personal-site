@@ -1,275 +1,265 @@
 {
-	"Navbar": {
-		"home": "HOME",
-		"about": "ABOUT",
-		"projects": "PROJECTS",
-		"contact": "CONTACT",
-		"toggleTheme": "Toggle theme",
-		"toggleMenu": "Toggle menu"
-	},
-	"Home": {
-		"metadata": {
-			"title": "Gaston Allende - Frontend Developer",
-			"description": "Passionate Frontend developer with a touch of backend and design skills. Over 10 years of industry experience."
-		},
-		"hero": {
-			"title": "Frontend Developer",
-			"subtitle": "Building reliable digital experiences with modern technologies and over 12 years of industry expertise.",
-			"viewProjects": "View Projects",
-			"getInTouch": "Get in Touch"
-		},
-		"features": {
-			"title": "What I Do",
-			"subtitle": "Combining creativity with technical expertise",
-			"items": [
-				{
-					"title": "Frontend Expertise",
-					"description": "Specialized in Angular and TypeScript, building scalable enterprise applications with clean, maintainable architecture."
-				},
-				{
-					"title": "Full-Stack Mindset",
-					"description": "Backend experience with C# and .NET, bridging the gap between UI and systems to build better end-to-end solutions."
-				},
-				{
-					"title": "Long-Term Quality",
-					"description": "Focused on stability and maintainability over quick fixes, especially in financial sector environments."
-				}
-			]
-		},
-		"cta": {
-			"title": "Let's Work Together",
-			"subtitle": "Ready to bring your ideas to life? Let's create something amazing.",
-			"button": "Start a Conversation"
-		}
-	},
-	"About": {
-		"metadata": {
-			"title": "About - Gaston Allende",
-			"description": "Learn more about Gaston Allende, his background, experience, and education in frontend development."
-		},
-		"hero": {
-			"title": "About Me",
-			"subtitle": "Frontend specialist with 12+ years of experience building enterprise applications, now expanding into AI and Python"
-		},
-		"bio": {
-			"title": "Building for the Long Term",
-			"paragraphs": [
-				"I've been working as a developer for over 12 years, mainly focused on frontend development with Angular in enterprise environments. Over time, I've also explored the backend side with C# and .NET, which has helped me understand how systems fit together beyond just the UI.",
-				"Today, I work in the financial sector building stable and maintainable applications, and I enjoy being part of teams that care about long-term quality rather than quick fixes.",
-				"Recently, I've started moving toward AI and generative AI, learning Python and gradually building knowledge in that space, step by step — especially where frontend, backend, and AI intersect."
-			],
-			"yearsExperience": "Years Experience"
-		},
-		"skills": {
-			"title": "Skills & Expertise",
-			"subtitle": "Tools and technologies I work with",
-			"categories": [
-				{
-					"title": "Frontend",
-					"items": ["Angular", "TypeScript", "RxJS", "React"]
-				},
-				{
-					"title": "Backend & Tools",
-					"items": ["C#", "REST APIs", "Docker", "Azure DevOps"]
-				},
-				{
-					"title": "AI & Python",
-					"items": ["Python", "Generative AI", "LLMs", "Machine Learning"]
-				},
-				{
-					"title": "Methodology",
-					"items": ["Agile / Scrum", "Kanban", "Git", "Jira"]
-				}
-			]
-		},
-		"experience": {
-			"title": "Experience",
-			"items": [
-				{
-					"year": "Jan 2026 - Present",
-					"title": "Software Developer (Frontend Focus)",
-					"company": "Enity Bank Group",
-					"description": "Leading frontend development with Angular and TypeScript in a financial sector environment, focusing on stable, maintainable enterprise applications."
-				},
-				{
-					"year": "May 2023 - Dec 2025",
-					"title": "Frontend Developer",
-					"company": "Enity Bank Group",
-					"description": "Built and maintained user-facing features for banking applications using Angular, TypeScript, RxJS, and Angular Material."
-				},
-				{
-					"year": "Jan 2023 - May 2023",
-					"title": "Frontend Developer (consultant)",
-					"company": "Invidem",
-					"description": "Consulting assignment delivering frontend solutions with Angular and TypeScript."
-				},
-				{
-					"year": "Jan 2020 - May 2023",
-					"title": "Frontend Developer",
-					"company": "FreeCode AB",
-					"description": "Developed frontend applications for multiple clients including Xylem Water Solutions, working with Angular and TypeScript in an Agile environment."
-				},
-				{
-					"year": "Feb 2020 - Jan 2023",
-					"title": "Frontend Developer (consultant)",
-					"company": "Xylem Water Solutions Sweden",
-					"description": "Consulting assignment building and maintaining frontend features with Angular, RxJS, and REST APIs."
-				},
-				{
-					"year": "Apr 2017 - Jan 2020",
-					"title": "System Developer",
-					"company": "Handelsbanken",
-					"description": "Full-stack development in a banking environment using AngularJS, C#, SQL DB2, and IBM WebSphere technologies."
-				},
-				{
-					"year": "Dec 2015 - Apr 2017",
-					"title": "Frontend Developer",
-					"company": "Bigspin",
-					"description": "Frontend development with JavaScript, AngularJS, HTML, CSS, and SASS for digital products."
-				},
-				{
-					"year": "Jan 2015 - Dec 2015",
-					"title": "Frontend Developer (Freelance)",
-					"company": "Yid - Digitalbyrå",
-					"description": "Freelance frontend development including WordPress, jQuery, HTML, and CSS for client websites."
-				},
-				{
-					"year": "Sep 2014 - Nov 2014",
-					"title": "Frontend Developer",
-					"company": "Klirr Stockholm AB",
-					"description": "Frontend development with HTML, CSS, JavaScript, and jQuery."
-				},
-				{
-					"year": "Jul 2014 - Aug 2014",
-					"title": "Frontend Developer",
-					"company": "Situs Media AB",
-					"description": "Frontend development with HTML, CSS, PHP, and JavaScript."
-				},
-				{
-					"year": "Apr 2014 - Jun 2014",
-					"title": "Frontend Developer",
-					"company": "Situs Media AB",
-					"description": "Frontend development with HTML, CSS, PHP, and JavaScript."
-				}
-			]
-		},
-		"education": {
-			"title": "Education",
-			"items": [
-				{
-					"period": "Sep 2024 - Nov 2024",
-					"school": "Nackademin",
-					"degree": "Prompt Engineering and Generative AI for Developers",
-					"highlights": ["Prompt Engineering", "Generative AI", "LLMs"]
-				},
-				{
-					"period": "2016 - 2018",
-					"school": "Lernia Yrkeshögskola",
-					"degree": "Backend Development - C#/.NET",
-					"highlights": ["C#", ".NET", "RESTful API", "SQL Server", "Agile Methods"]
-				},
-				{
-					"period": "2013 - 2015",
-					"school": "JENSEN yrkeshögskola",
-					"degree": "Web Development",
-					"highlights": ["JavaScript", "Node.js", "HTML/CSS/SASS", "PHP", "MySQL", "Responsive Design"]
-				},
-				{
-					"period": "2012 - 2013",
-					"school": "Jensen Education / Komvux",
-					"degree": "Programming",
-					"highlights": ["Programming fundamentals"]
-				}
-			]
-		}
-	},
-	"Projects": {
-		"metadata": {
-			"title": "Projects - Gaston Allende",
-			"description": "Explore the projects built by Gaston Allende — from web apps to design systems."
-		},
-		"header": {
-			"title": "Featured Projects",
-			"subtitle": "A collection of my recent work spanning web development, mobile apps, and innovative digital solutions"
-		},
-		"liveDemo": "Live Demo",
-		"items": [
-			{
-				"title": "E-Commerce Platform",
-				"category": "Web Development",
-				"description": "A modern e-commerce solution with real-time inventory",
-				"fullDescription": "Built a comprehensive e-commerce platform featuring real-time inventory management, secure payment processing, and an intuitive admin dashboard. The platform handles thousands of transactions daily with 99.9% uptime."
-			},
-			{
-				"title": "Design System",
-				"category": "UI/UX Design",
-				"description": "Comprehensive design system for enterprise applications",
-				"fullDescription": "Created a scalable design system used across multiple products, featuring 100+ components, comprehensive documentation, and accessibility guidelines. Reduced design-to-development time by 40%."
-			},
-			{
-				"title": "Analytics Dashboard",
-				"category": "Data Visualization",
-				"description": "Real-time analytics with interactive visualizations",
-				"fullDescription": "Built an advanced analytics dashboard processing millions of data points in real-time. Features customizable widgets, automated reporting, and predictive analytics powered by modern algorithms."
-			},
-			{
-				"title": "Social Platform",
-				"category": "Full Stack",
-				"description": "Next-generation social networking experience",
-				"fullDescription": "Launched a social media platform with innovative features including AI-powered content recommendations, live streaming, and advanced privacy controls. Scaled to support 50,000+ concurrent users."
-			},
-			{
-				"title": "Mobile Banking App",
-				"category": "Mobile Development",
-				"description": "Secure mobile banking with biometric authentication",
-				"fullDescription": "Developed a feature-rich mobile banking application with advanced security features including biometric authentication, encrypted transactions, and real-time fraud detection."
-			},
-			{
-				"title": "Component Library",
-				"category": "Open Source",
-				"description": "Reusable React component library with full TypeScript support",
-				"fullDescription": "Developed and published an open-source React component library with full TypeScript support, comprehensive documentation, and a Storybook playground. Used by multiple teams across different projects."
-			}
-		]
-	},
-	"Contact": {
-		"metadata": {
-			"title": "Contact - Gaston Allende",
-			"description": "Get in touch with Gaston Allende for frontend development opportunities and collaborations."
-		},
-		"header": {
-			"title": "Get In Touch",
-			"subtitle": "Have a project in mind? Let's discuss how we can work together to bring your ideas to life."
-		},
-		"info": {
-			"title": "Let's Start a Conversation",
-			"description": "Whether you have a question, want to start a project, or simply want to connect, feel free to reach out. I'm always open to discussing new opportunities and ideas.",
-			"email": "Email",
-			"location": "Location",
-			"followMe": "Follow Me"
-		},
-		"form": {
-			"name": "Name",
-			"namePlaceholder": "Your name",
-			"email": "Email",
-			"emailPlaceholder": "your@email.com",
-			"subject": "Subject",
-			"subjectPlaceholder": "Project inquiry",
-			"message": "Message",
-			"messagePlaceholder": "Tell me about your project...",
-			"send": "Send Message",
-			"sent": "Message Sent!"
-		}
-	},
-	"Footer": {
-		"tagline": "Creating exceptional digital experiences with passion and precision for over 10 years.",
-		"navigation": "Navigation",
-		"connect": "Connect",
-		"home": "Home",
-		"about": "About",
-		"projects": "Projects",
-		"contact": "Contact",
-		"copyright": "© {year} Gaston Allende. All rights reserved.",
-		"scrollToTop": "Scroll to top"
-	}
+  "Navbar": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "projects": "PROJECTS",
+    "contact": "CONTACT",
+    "toggleTheme": "Toggle theme",
+    "toggleMenu": "Toggle menu"
+  },
+  "Home": {
+    "metadata": {
+      "title": "Gaston Allende - Frontend Developer",
+      "description": "Passionate Frontend developer with a touch of backend and design skills. Over 10 years of industry experience."
+    },
+    "hero": {
+      "title": "Frontend Developer",
+      "subtitle": "Creating visually appealing and intuitive digital experiences with over 12 years of expertise in the JavaScript ecosystem.",
+      "viewProjects": "View Projects",
+      "getInTouch": "Get in Touch"
+    },
+    "features": {
+      "title": "What I Do",
+      "subtitle": "Combining creativity with technical expertise",
+      "items": [
+        {
+          "title": "Frontend Expertise",
+          "description": "Specialized in Angular and TypeScript, building scalable enterprise applications with clean, maintainable architecture."
+        },
+        {
+          "title": "Full-Stack Mindset",
+          "description": "Backend experience with C# and .NET, bridging the gap between UI and systems to build better end-to-end solutions."
+        },
+        {
+          "title": "Long-Term Quality",
+          "description": "Focused on stability and maintainability over quick fixes, especially in financial sector environments."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Let's Work Together",
+      "subtitle": "Ready to bring your ideas to life? Let's create something amazing.",
+      "button": "Start a Conversation"
+    }
+  },
+  "About": {
+    "metadata": {
+      "title": "About - Gaston Allende",
+      "description": "Learn more about Gaston Allende, his background, experience, and education in frontend development."
+    },
+    "hero": {
+      "title": "About Me",
+      "subtitle": "Frontend specialist with 12+ years of experience building enterprise applications, now expanding into AI and Python"
+    },
+    "bio": {
+      "title": "Building for the Long Term",
+      "paragraphs": [
+        "As a passionate developer, I thrive on creating visually appealing and intuitive applications with strong user experiences. With broad experience across the JavaScript ecosystem, I stay continuously up to date through courses and workshops on platforms like Udemy and Frontend Masters.",
+        "I have a keen eye for detail and build user-friendly interfaces with clean, maintainable code — something I see as the key to sustainable, long-term projects.",
+        "Today, I work in the financial sector as a fullstack developer, and I've recently started exploring AI and generative AI, learning Python and gradually building knowledge where frontend, backend, and AI intersect."
+      ],
+      "yearsExperience": "Years Experience"
+    },
+    "skills": {
+      "title": "Skills & Expertise",
+      "subtitle": "Tools and technologies I work with",
+      "categories": [
+        {
+          "title": "Frontend",
+          "items": ["Angular", "TypeScript", "RxJS", "NGRX", "React", "Vue.js"]
+        },
+        {
+          "title": "Backend & Tools",
+          "items": ["C#", ".NET", "REST APIs", "Docker", "Azure DevOps"]
+        },
+        {
+          "title": "Testing & Quality",
+          "items": ["Playwright", "Jasmine", "Web Accessibility", "CI/CD"]
+        },
+        {
+          "title": "Methodology",
+          "items": ["Agile / Scrum", "Kanban", "Git", "Jira", "Confluence"]
+        }
+      ]
+    },
+    "experience": {
+      "title": "Experience",
+      "items": [
+        {
+          "year": "May 2023 - Present",
+          "title": "Frontend Developer / Fullstack Developer",
+          "company": "Enity Bank Group",
+          "description": "Developing web-based solutions focused on user experience, performance, and scalability. Building component-based interfaces with Angular and TypeScript in close collaboration with UX designers and backend developers. Driving code review processes, CI/CD, and performance measurement while contributing to architecture and technology decisions for long-term code quality. Recently expanded responsibilities to include fullstack development."
+        },
+        {
+          "year": "Jan 2023 - May 2023",
+          "title": "Frontend Developer (Consultant via FreeCode AB)",
+          "company": "Invidem AB",
+          "description": "Refactored the codebase to achieve better architecture, scalability, maintainability, and performance. As a more senior developer, played a key role in mentoring junior developers, guiding them in best practices and helping them solve technical challenges."
+        },
+        {
+          "year": "Feb 2020 - Jan 2023",
+          "title": "Frontend Developer (Consultant via FreeCode AB)",
+          "company": "Xylem AB",
+          "description": "Collaborated with scrum masters, testers, product owners, and backend developers across five teams, two located abroad. During the last 1.5 years, took on the role of frontend lead, managing a team of three frontend developers building a web application to control and configure water pump stations in Sweden and other countries. Worked closely with a UX designer to establish design rules and patterns. As the project's first frontend developer, contributed to key architectural and design decisions."
+        },
+        {
+          "year": "Mar 2017 - Jan 2020",
+          "title": "System Developer",
+          "company": "Handelsbanken",
+          "description": "Started as a trainee, gaining a solid foundation in IBM's technology stack. Worked with DB2, CL scripting, and RPG/LE to develop and maintain high-quality software solutions in production environments."
+        },
+        {
+          "year": "Dec 2015 - Mar 2017",
+          "title": "Frontend Developer",
+          "company": "Bigspin/Waylight",
+          "description": "Developed websites, campaign pages, and integrations for various clients using JavaScript, CSS/SASS, and modern frameworks like Angular and Vue.js. Worked closely with clients to ensure deliverables met both technical and business requirements."
+        },
+        {
+          "year": "Jan 2015 - Dec 2015",
+          "title": "Frontend Developer (Freelance)",
+          "company": "YID",
+          "description": "Designed and developed websites using Laravel and Vue.js. Freelanced on multiple frontend development projects during this period."
+        },
+        {
+          "year": "Sep 2014 - Nov 2014",
+          "title": "Frontend Developer (Intern)",
+          "company": "Klirr/Nosy",
+          "description": "Worked on an event system and the 'Challenge Ebola' campaign page supporting Doctors Without Borders and the Red Cross. Created a portfolio template with Bootstrap and implemented it in a CMS."
+        },
+        {
+          "year": "Apr 2014 - Aug 2014",
+          "title": "Frontend Developer (Intern / Summer Job)",
+          "company": "Situs Media",
+          "description": "Offered employment after the internship. Developed various modules, created custom solutions for websites, and implemented plugins in Snowfire CMS."
+        }
+      ]
+    },
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "period": "Sep 2024 - Nov 2024",
+          "school": "Nackademin",
+          "degree": "Prompt Engineering and Generative AI for Developers",
+          "highlights": ["Prompt Engineering", "Generative AI", "LLMs"]
+        },
+        {
+          "period": "2016 - 2018",
+          "school": "Lernia Yrkeshögskola",
+          "degree": "Backend Development - C#/.NET",
+          "highlights": ["C#", ".NET", "RESTful API", "SQL Server", "Agile Methods"]
+        },
+        {
+          "period": "2013 - 2015",
+          "school": "JENSEN yrkeshögskola",
+          "degree": "Web Development",
+          "highlights": ["JavaScript", "Node.js", "HTML/CSS/SASS", "PHP", "MySQL", "Responsive Design"]
+        },
+        {
+          "period": "2012 - 2013",
+          "school": "Jensen Education / Komvux",
+          "degree": "Programming",
+          "highlights": ["Programming fundamentals"]
+        }
+      ]
+    },
+    "languages": {
+      "title": "Languages",
+      "items": [
+        { "language": "Swedish", "level": "Fluent" },
+        { "language": "Spanish", "level": "Fluent" },
+        { "language": "English", "level": "Highly proficient" }
+      ]
+    }
+  },
+  "Projects": {
+    "metadata": {
+      "title": "Projects - Gaston Allende",
+      "description": "Explore the projects built by Gaston Allende — from web apps to design systems."
+    },
+    "header": {
+      "title": "Featured Projects",
+      "subtitle": "A collection of my recent work spanning web development, mobile apps, and innovative digital solutions"
+    },
+    "liveDemo": "Live Demo",
+    "items": [
+      {
+        "title": "E-Commerce Platform",
+        "category": "Web Development",
+        "description": "A modern e-commerce solution with real-time inventory",
+        "fullDescription": "Built a comprehensive e-commerce platform featuring real-time inventory management, secure payment processing, and an intuitive admin dashboard. The platform handles thousands of transactions daily with 99.9% uptime."
+      },
+      {
+        "title": "Design System",
+        "category": "UI/UX Design",
+        "description": "Comprehensive design system for enterprise applications",
+        "fullDescription": "Created a scalable design system used across multiple products, featuring 100+ components, comprehensive documentation, and accessibility guidelines. Reduced design-to-development time by 40%."
+      },
+      {
+        "title": "Analytics Dashboard",
+        "category": "Data Visualization",
+        "description": "Real-time analytics with interactive visualizations",
+        "fullDescription": "Built an advanced analytics dashboard processing millions of data points in real-time. Features customizable widgets, automated reporting, and predictive analytics powered by modern algorithms."
+      },
+      {
+        "title": "Social Platform",
+        "category": "Full Stack",
+        "description": "Next-generation social networking experience",
+        "fullDescription": "Launched a social media platform with innovative features including AI-powered content recommendations, live streaming, and advanced privacy controls. Scaled to support 50,000+ concurrent users."
+      },
+      {
+        "title": "Mobile Banking App",
+        "category": "Mobile Development",
+        "description": "Secure mobile banking with biometric authentication",
+        "fullDescription": "Developed a feature-rich mobile banking application with advanced security features including biometric authentication, encrypted transactions, and real-time fraud detection."
+      },
+      {
+        "title": "Component Library",
+        "category": "Open Source",
+        "description": "Reusable React component library with full TypeScript support",
+        "fullDescription": "Developed and published an open-source React component library with full TypeScript support, comprehensive documentation, and a Storybook playground. Used by multiple teams across different projects."
+      }
+    ]
+  },
+  "Contact": {
+    "metadata": {
+      "title": "Contact - Gaston Allende",
+      "description": "Get in touch with Gaston Allende for frontend development opportunities and collaborations."
+    },
+    "header": {
+      "title": "Get In Touch",
+      "subtitle": "Have a project in mind? Let's discuss how we can work together to bring your ideas to life."
+    },
+    "info": {
+      "title": "Let's Start a Conversation",
+      "description": "Whether you have a question, want to start a project, or simply want to connect, feel free to reach out. I'm always open to discussing new opportunities and ideas.",
+      "email": "Email",
+      "location": "Location",
+      "followMe": "Follow Me"
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Project inquiry",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "send": "Send Message",
+      "sent": "Message Sent!"
+    }
+  },
+  "Footer": {
+    "tagline": "Creating exceptional digital experiences with passion and precision for over 10 years.",
+    "navigation": "Navigation",
+    "connect": "Connect",
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "copyright": "© {year} Gaston Allende. All rights reserved.",
+    "scrollToTop": "Scroll to top"
+  }
 }

@@ -27,7 +27,7 @@ export function ContactContent() {
 		{
 			icon: MapPin,
 			label: t('info.location'),
-			value: 'Argentina',
+			value: 'Stockholm, Sweden',
 		},
 	];
 
