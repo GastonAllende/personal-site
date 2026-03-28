@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Code2, Server, Brain, Users } from 'lucide-react';
+import { Code2, Server, Brain, Users, GraduationCap } from 'lucide-react';
 import Image from 'next/image';
 import profilePic from '../../../public/images/gaston-me.png';
 
@@ -25,6 +25,33 @@ const skills = [
 		icon: Users,
 		title: 'Methodology',
 		items: ['Agile / Scrum', 'Kanban', 'Git', 'Jira'],
+	},
+];
+
+const education = [
+	{
+		period: 'Sep 2024 - Nov 2024',
+		school: 'Nackademin',
+		degree: 'Prompt Engineering and Generative AI for Developers',
+		highlights: ['Prompt Engineering', 'Generative AI', 'LLMs'],
+	},
+	{
+		period: '2016 - 2018',
+		school: 'Lernia Yrkeshögskola',
+		degree: 'Backend Development - C#/.NET',
+		highlights: ['C#', '.NET', 'RESTful API', 'SQL Server', 'Agile Methods'],
+	},
+	{
+		period: '2013 - 2015',
+		school: 'JENSEN yrkeshögskola',
+		degree: 'Web Development',
+		highlights: ['JavaScript', 'Node.js', 'HTML/CSS/SASS', 'PHP', 'MySQL', 'Responsive Design'],
+	},
+	{
+		period: '2012 - 2013',
+		school: 'Jensen Education / Komvux',
+		degree: 'Programming',
+		highlights: ['Programming fundamentals'],
 	},
 ];
 
@@ -242,6 +269,53 @@ export function AboutContent() {
 									<h3 className="text-2xl mb-1 text-black dark:text-white">{item.title}</h3>
 									<p className="text-gray-600 dark:text-gray-400 mb-2">{item.company}</p>
 									<p className="text-gray-600 dark:text-gray-400 text-sm">{item.description}</p>
+								</div>
+							</motion.div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* Education */}
+			<section className="px-6 py-32 bg-linear-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-950">
+				<div className="max-w-4xl mx-auto">
+					<motion.div
+						initial={{ opacity: 0, y: 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						transition={{ duration: 0.8 }}
+						className="text-center mb-16"
+					>
+						<h2 className="text-5xl tracking-tight mb-4 text-black dark:text-white font-medium">Education</h2>
+					</motion.div>
+
+					<div className="space-y-8">
+						{education.map((item, index) => (
+							<motion.div
+								key={index}
+								initial={{ opacity: 0, x: -30 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								viewport={{ once: true }}
+								transition={{ delay: index * 0.15, duration: 0.8 }}
+								className="flex gap-8 items-start"
+							>
+								<div className="text-sm text-gray-600 dark:text-gray-400 min-w-35">{item.period}</div>
+								<div className="flex-1 border-l border-gray-200 dark:border-gray-700 pl-8">
+									<div className="flex items-center gap-3 mb-1">
+										<GraduationCap className="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0" />
+										<h3 className="text-2xl text-black dark:text-white">{item.degree}</h3>
+									</div>
+									<p className="text-gray-600 dark:text-gray-400 mb-3">{item.school}</p>
+									<div className="flex flex-wrap gap-2">
+										{item.highlights.map((tag) => (
+											<span
+												key={tag}
+												className="text-xs px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700"
+											>
+												{tag}
+											</span>
+										))}
+									</div>
 								</div>
 							</motion.div>
 						))}
