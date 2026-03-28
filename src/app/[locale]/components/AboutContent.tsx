@@ -158,12 +158,12 @@ export function AboutContent() {
 								initial={{ opacity: 0, x: -30 }}
 								whileInView={{ opacity: 1, x: 0 }}
 								viewport={{ once: true }}
-								transition={{ delay: index * 0.2, duration: 0.8 }}
-								className="flex gap-8 items-start"
+								transition={{ delay: index * 0.1, duration: 0.8 }}
+								className="flex flex-col md:flex-row md:gap-8"
 							>
-								<div className="text-sm text-gray-600 dark:text-gray-400 min-w-35">{item.year}</div>
-								<div className="flex-1 border-l border-gray-200 dark:border-gray-700 pl-8">
-									<h3 className="text-2xl mb-1 text-black dark:text-white">{item.title}</h3>
+								<div className="text-sm text-gray-600 dark:text-gray-400 mb-2 md:mb-0 md:min-w-40 md:pt-1">{item.year}</div>
+								<div className="flex-1 border-l-2 border-gray-200 dark:border-gray-700 pl-6 md:pl-8 pb-2">
+									<h3 className="text-xl md:text-2xl mb-1 text-black dark:text-white">{item.title}</h3>
 									<p className="text-gray-600 dark:text-gray-400 mb-2">{item.company}</p>
 									<p className="text-gray-600 dark:text-gray-400 text-sm">{item.description}</p>
 								</div>
@@ -193,14 +193,14 @@ export function AboutContent() {
 								initial={{ opacity: 0, x: -30 }}
 								whileInView={{ opacity: 1, x: 0 }}
 								viewport={{ once: true }}
-								transition={{ delay: index * 0.15, duration: 0.8 }}
-								className="flex gap-8 items-start"
+								transition={{ delay: index * 0.1, duration: 0.8 }}
+								className="flex flex-col md:flex-row md:gap-8"
 							>
-								<div className="text-sm text-gray-600 dark:text-gray-400 min-w-35">{item.period}</div>
-								<div className="flex-1 border-l border-gray-200 dark:border-gray-700 pl-8">
+								<div className="text-sm text-gray-600 dark:text-gray-400 mb-2 md:mb-0 md:min-w-40 md:pt-1">{item.period}</div>
+								<div className="flex-1 border-l-2 border-gray-200 dark:border-gray-700 pl-6 md:pl-8 pb-2">
 									<div className="flex items-center gap-3 mb-1">
 										<GraduationCap className="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0" />
-										<h3 className="text-2xl text-black dark:text-white">{item.degree}</h3>
+										<h3 className="text-xl md:text-2xl text-black dark:text-white">{item.degree}</h3>
 									</div>
 									<p className="text-gray-600 dark:text-gray-400 mb-3">{item.school}</p>
 									<div className="flex flex-wrap gap-2">
