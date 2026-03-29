@@ -1,12 +1,12 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Code2, Server, ShieldCheck, Users, GraduationCap, Globe } from 'lucide-react';
+import { Code2, Server, ShieldCheck, Users, Bot, GraduationCap, Globe } from 'lucide-react';
 import Image from 'next/image';
 import profilePic from '../../../../public/images/gaston-me.png';
 import { useTranslations } from 'next-intl';
 
-const skillIcons = [Code2, Server, ShieldCheck, Users];
+const skillIcons = [Code2, Server, ShieldCheck, Users, Bot];
 
 export function AboutContent() {
 	const t = useTranslations('About');
@@ -107,7 +107,7 @@ export function AboutContent() {
 						<p className="text-xl text-gray-600 dark:text-gray-400">{t('skills.subtitle')}</p>
 					</motion.div>
 
-					<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+					<div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
 						{skillCategories.map((skill, index) => {
 							const Icon = skillIcons[index];
 							return (

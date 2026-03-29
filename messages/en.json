@@ -66,19 +66,23 @@
       "categories": [
         {
           "title": "Frontend",
-          "items": ["Angular", "TypeScript", "RxJS", "NGRX", "React", "Vue.js"]
+          "items": ["Angular", "TypeScript", "RxJS", "NGRX", "Signal Store", "Vue.js"]
         },
         {
           "title": "Backend & Tools",
-          "items": ["C#", ".NET", "REST APIs", "Docker", "Azure DevOps"]
+          "items": ["C#", ".NET", "REST APIs", "SQL", "WebSockets", "Docker", "Azure"]
         },
         {
           "title": "Testing & Quality",
-          "items": ["Playwright", "Jasmine", "Web Accessibility", "CI/CD"]
+          "items": ["Playwright", "Web Accessibility", "CI/CD", "Figma"]
         },
         {
           "title": "Methodology",
-          "items": ["Agile / Scrum", "Kanban", "Git", "Jira", "Confluence"]
+          "items": ["Agile / Scrum", "Kanban", "Git", "Jira", "Confluence", "Bitbucket"]
+        },
+        {
+          "title": "AI & Developer Tools",
+          "items": ["GitHub Copilot", "Claude Code", "Prompt Engineering"]
         }
       ]
     },
@@ -116,22 +120,10 @@
           "description": "Developed websites, campaign pages, and integrations for various clients using JavaScript, CSS/SASS, and modern frameworks like Angular and Vue.js. Worked closely with clients to ensure deliverables met both technical and business requirements."
         },
         {
-          "year": "Jan 2015 - Dec 2015",
-          "title": "Frontend Developer (Freelance)",
-          "company": "YID",
-          "description": "Designed and developed websites using Laravel and Vue.js. Freelanced on multiple frontend development projects during this period."
-        },
-        {
-          "year": "Sep 2014 - Nov 2014",
-          "title": "Frontend Developer (Intern)",
-          "company": "Klirr/Nosy",
-          "description": "Worked on an event system and the 'Challenge Ebola' campaign page supporting Doctors Without Borders and the Red Cross. Created a portfolio template with Bootstrap and implemented it in a CMS."
-        },
-        {
-          "year": "Apr 2014 - Aug 2014",
-          "title": "Frontend Developer (Intern / Summer Job)",
-          "company": "Situs Media",
-          "description": "Offered employment after the internship. Developed various modules, created custom solutions for websites, and implemented plugins in Snowfire CMS."
+          "year": "Apr 2014 - Dec 2015",
+          "title": "Web Developer (Internship, Summer Job & Freelance)",
+          "company": "Situs Media AB / Klirr (Nozy) / Freelance",
+          "description": "Built technical foundation through internships and freelance projects. At Situs Media AB, developed modules and custom CMS solutions in Snowfire — offered continued employment after the internship. At Klirr reklambyrå AB (Nozy), worked on an event system and the 'Challenge Ebola' campaign page supporting Doctors Without Borders and the Red Cross. As a freelancer, independently handled design and development of complete web projects using Laravel and Vue.js."
         }
       ]
     },
@@ -139,7 +131,7 @@
       "title": "Education",
       "items": [
         {
-          "period": "Sep 2024 - Nov 2024",
+          "period": "Aug 2024 - Oct 2024",
           "school": "Nackademin",
           "degree": "Prompt Engineering and Generative AI for Developers",
           "highlights": ["Prompt Engineering", "Generative AI", "LLMs"]
@@ -151,7 +143,7 @@
           "highlights": ["C#", ".NET", "RESTful API", "SQL Server", "Agile Methods"]
         },
         {
-          "period": "2013 - 2015",
+          "period": "Aug 2013 - Dec 2014",
           "school": "JENSEN yrkeshögskola",
           "degree": "Web Development",
           "highlights": ["JavaScript", "Node.js", "HTML/CSS/SASS", "PHP", "MySQL", "Responsive Design"]

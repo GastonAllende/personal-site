@@ -66,19 +66,23 @@
       "categories": [
         {
           "title": "Frontend",
-          "items": ["Angular", "TypeScript", "RxJS", "NGRX", "React", "Vue.js"]
+          "items": ["Angular", "TypeScript", "RxJS", "NGRX", "Signal Store", "Vue.js"]
         },
         {
           "title": "Backend & Verktyg",
-          "items": ["C#", ".NET", "REST APIs", "Docker", "Azure DevOps"]
+          "items": ["C#", ".NET", "REST APIs", "SQL", "WebSockets", "Docker", "Azure"]
         },
         {
           "title": "Testning & Kvalitet",
-          "items": ["Playwright", "Jasmine", "Webbtillgänglighet", "CI/CD"]
+          "items": ["Playwright", "Webbtillgänglighet", "CI/CD", "Figma"]
         },
         {
           "title": "Metodik",
-          "items": ["Agile / Scrum", "Kanban", "Git", "Jira", "Confluence"]
+          "items": ["Agile / Scrum", "Kanban", "Git", "Jira", "Confluence", "Bitbucket"]
+        },
+        {
+          "title": "AI & Utvecklarverktyg",
+          "items": ["GitHub Copilot", "Claude Code", "Prompt Engineering"]
         }
       ]
     },
@@ -116,22 +120,10 @@
           "description": "Utvecklade webbsidor, kampanjsidor och integrationer för olika kunder med JavaScript, CSS/SASS och moderna ramverk som Angular och Vue.js. Nära kundsamarbete för att säkerställa att leveranserna mötte både tekniska och affärsmässiga krav."
         },
         {
-          "year": "Jan 2015 - Dec 2015",
-          "title": "Frontendutvecklare (Frilans)",
-          "company": "YID - Digitalbyrå",
-          "description": "Designade och utvecklade webbplatser med Laravel och Vue.js. Frilansade och arbetade med flera projekt inom frontendutveckling."
-        },
-        {
-          "year": "Sep 2014 - Nov 2014",
-          "title": "Frontendutvecklare (Praktik)",
-          "company": "Klirr (Nosy)",
-          "description": "Arbetade med ett eventsystem och kampanjsidan 'Utmana Ebola' till stöd för Läkare Utan Gränser och Röda Korset. Skapade en portföljmall med Bootstrap och implementerade den i ett CMS."
-        },
-        {
-          "year": "Apr 2014 - Aug 2014",
-          "title": "Frontendutvecklare (Praktik/Sommarjobb)",
-          "company": "Situs Media AB",
-          "description": "Erbjöds anställning efter praktiken. Utvecklade moduler, skapade anpassade lösningar för webbsidor och implementerade tillägg i Snowfire CMS."
+          "year": "Apr 2014 - Dec 2015",
+          "title": "Webbutvecklare (Praktik, Sommarjobb & Frilans)",
+          "company": "Situs Media AB / Klirr (Nozy) / Frilans",
+          "description": "Byggde min tekniska grund genom praktik och frilansprojekt. På Situs Media AB utvecklade jag moduler och anpassade CMS-lösningar i Snowfire — fick efter praktiken ett erbjudande om fortsatt anställning. På Klirr reklambyrå AB (Nozy) arbetade jag med ett eventsystem och kampanjsidan 'Utmana Ebola' till stöd för Läkare Utan Gränser och Röda Korset. Som frilansare ansvarade jag självständigt för design och utveckling av hela webbprojekt med Laravel och Vue.js."
         }
       ]
     },
@@ -139,7 +131,7 @@
       "title": "Utbildning",
       "items": [
         {
-          "period": "Sep 2024 - Nov 2024",
+          "period": "Aug 2024 - Okt 2024",
           "school": "Nackademin",
           "degree": "Prompt Engineering och Generative AI för utvecklare",
           "highlights": ["Prompt Engineering", "Generative AI", "LLMs"]
@@ -151,7 +143,7 @@
           "highlights": ["C#", ".NET", "RESTful API", "SQL Server", "Agila metoder"]
         },
         {
-          "period": "2013 - 2015",
+          "period": "Aug 2013 - Dec 2014",
           "school": "JENSEN yrkeshögskola",
           "degree": "Webbutveckling",
           "highlights": ["JavaScript", "Node.js", "HTML/CSS/SASS", "PHP", "MySQL", "Responsiv design"]

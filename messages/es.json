@@ -66,19 +66,23 @@
       "categories": [
         {
           "title": "Frontend",
-          "items": ["Angular", "TypeScript", "RxJS", "NGRX", "React", "Vue.js"]
+          "items": ["Angular", "TypeScript", "RxJS", "NGRX", "Signal Store", "Vue.js"]
         },
         {
           "title": "Backend y Herramientas",
-          "items": ["C#", ".NET", "REST APIs", "Docker", "Azure DevOps"]
+          "items": ["C#", ".NET", "REST APIs", "SQL", "WebSockets", "Docker", "Azure"]
         },
         {
           "title": "Testing y Calidad",
-          "items": ["Playwright", "Jasmine", "Accesibilidad Web", "CI/CD"]
+          "items": ["Playwright", "Accesibilidad Web", "CI/CD", "Figma"]
         },
         {
           "title": "Metodología",
-          "items": ["Agile / Scrum", "Kanban", "Git", "Jira", "Confluence"]
+          "items": ["Agile / Scrum", "Kanban", "Git", "Jira", "Confluence", "Bitbucket"]
+        },
+        {
+          "title": "IA y Herramientas de Desarrollo",
+          "items": ["GitHub Copilot", "Claude Code", "Prompt Engineering"]
         }
       ]
     },
@@ -116,22 +120,10 @@
           "description": "Desarrollé sitios web, páginas de campañas e integraciones para diversos clientes usando JavaScript, CSS/SASS y frameworks modernos como Angular y Vue.js. Colaboración cercana con clientes para asegurar que las entregas cumplieran requisitos técnicos y de negocio."
         },
         {
-          "year": "Ene 2015 - Dic 2015",
-          "title": "Desarrollador Frontend (Freelance)",
-          "company": "YID - Digitalbyrå",
-          "description": "Diseñé y desarrollé sitios web usando Laravel y Vue.js. Trabajé como freelance en múltiples proyectos de desarrollo frontend."
-        },
-        {
-          "year": "Sep 2014 - Nov 2014",
-          "title": "Desarrollador Frontend (Pasantía)",
-          "company": "Klirr (Nosy)",
-          "description": "Trabajé en un sistema de eventos y la página de campaña 'Desafía al Ébola' en apoyo a Médicos Sin Fronteras y Cruz Roja. Creé una plantilla de portafolio con Bootstrap y la implementé en un CMS."
-        },
-        {
-          "year": "Abr 2014 - Ago 2014",
-          "title": "Desarrollador Frontend (Pasantía/Trabajo de verano)",
-          "company": "Situs Media AB",
-          "description": "Ofrecido empleo después de la pasantía. Desarrollé módulos, creé soluciones personalizadas para sitios web e implementé plugins en Snowfire CMS."
+          "year": "Abr 2014 - Dic 2015",
+          "title": "Desarrollador Web (Pasantía, Trabajo de Verano & Freelance)",
+          "company": "Situs Media AB / Klirr (Nozy) / Freelance",
+          "description": "Construí mi base técnica a través de pasantías y proyectos freelance. En Situs Media AB, desarrollé módulos y soluciones personalizadas de CMS en Snowfire — me ofrecieron empleo al finalizar la pasantía. En Klirr reklambyrå AB (Nozy), trabajé en un sistema de eventos y la página de campaña 'Desafía al Ébola' en apoyo a Médicos Sin Fronteras y Cruz Roja. Como freelancer, diseñé y desarrollé proyectos web completos de forma independiente usando Laravel y Vue.js."
         }
       ]
     },
@@ -139,7 +131,7 @@
       "title": "Educación",
       "items": [
         {
-          "period": "Sep 2024 - Nov 2024",
+          "period": "Ago 2024 - Oct 2024",
           "school": "Nackademin",
           "degree": "Prompt Engineering e IA Generativa para Desarrolladores",
           "highlights": ["Prompt Engineering", "IA Generativa", "LLMs"]
@@ -151,7 +143,7 @@
           "highlights": ["C#", ".NET", "RESTful API", "SQL Server", "Métodos Ágiles"]
         },
         {
-          "period": "2013 - 2015",
+          "period": "Ago 2013 - Dic 2014",
           "school": "JENSEN yrkeshögskola",
           "degree": "Desarrollo Web",
           "highlights": ["JavaScript", "Node.js", "HTML/CSS/SASS", "PHP", "MySQL", "Diseño Responsivo"]
