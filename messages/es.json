@@ -10,7 +10,7 @@
   "Home": {
     "metadata": {
       "title": "Gaston Allende - Desarrollador Frontend",
-      "description": "Desarrollador Frontend apasionado con conocimientos de backend y diseño. Más de 10 años de experiencia en la industria."
+      "description": "Desarrollador Frontend apasionado con conocimientos de backend y diseño. Más de 12 años de experiencia en la industria."
     },
     "hero": {
       "title": "Desarrollador Frontend / Fullstack",
@@ -241,11 +241,13 @@
       "messagePlaceholder": "Contame sobre tu proyecto...",
       "send": "Enviar Mensaje",
       "sending": "Enviando...",
-      "sent": "¡Mensaje Enviado!"
+      "sent": "¡Mensaje Enviado!",
+      "successTitle": "¡Mensaje enviado!",
+      "successMessage": "Gracias por escribirme. Te responderé lo antes posible."
     }
   },
   "Footer": {
-    "tagline": "Creando experiencias digitales excepcionales con pasión y precisión durante más de 10 años.",
+    "tagline": "Creando experiencias digitales excepcionales con pasión y precisión durante más de 12 años.",
     "navigation": "Navegación",
     "connect": "Conectar",
     "home": "Inicio",

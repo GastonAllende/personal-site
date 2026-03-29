@@ -241,11 +241,13 @@
       "messagePlaceholder": "Tell me about your project...",
       "send": "Send Message",
       "sending": "Sending...",
-      "sent": "Message Sent!"
+      "sent": "Message Sent!",
+      "successTitle": "Message sent!",
+      "successMessage": "Thank you for reaching out. I'll get back to you as soon as possible."
     }
   },
   "Footer": {
-    "tagline": "Creating exceptional digital experiences with passion and precision for over 10 years.",
+    "tagline": "Creating exceptional digital experiences with passion and precision for over 12 years.",
     "navigation": "Navigation",
     "connect": "Connect",
     "home": "Home",

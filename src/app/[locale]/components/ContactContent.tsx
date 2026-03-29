@@ -1,7 +1,7 @@
 'use client';
 
-import { motion } from 'motion/react';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Mail, MapPin, Send, CheckCircle } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, TwitterIcon } from './BrandIcons';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
@@ -153,6 +153,29 @@ export function ContactContent() {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ delay: 0.4, duration: 0.8 }}
 					>
+						<AnimatePresence mode="wait">
+						{submitted ? (
+							<motion.div
+								key="success"
+								initial={{ opacity: 0, scale: 0.95 }}
+								animate={{ opacity: 1, scale: 1 }}
+								exit={{ opacity: 0, scale: 0.95 }}
+								transition={{ duration: 0.4 }}
+								className="bg-linear-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 p-8 md:p-12 rounded-3xl border border-gray-100 dark:border-gray-700 flex flex-col items-center justify-center text-center gap-6 min-h-[420px]"
+							>
+								<div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+									<CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
+								</div>
+								<div>
+									<h3 className="text-2xl font-medium text-black dark:text-white mb-2">
+										{t('form.successTitle')}
+									</h3>
+									<p className="text-gray-600 dark:text-gray-400">
+										{t('form.successMessage')}
+									</p>
+								</div>
+							</motion.div>
+						) : (
 						<form
 							onSubmit={handleSubmit}
 							className="bg-linear-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800 p-8 md:p-12 rounded-3xl border border-gray-100 dark:border-gray-700"
@@ -233,11 +256,13 @@ export function ContactContent() {
 									whileTap={{ scale: 0.98 }}
 									className="w-full py-4 bg-black dark:bg-white text-white dark:text-black rounded-2xl flex items-center justify-center gap-2 hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors font-medium disabled:opacity-60 disabled:cursor-not-allowed"
 								>
-									{isLoading ? t('form.sending') : submitted ? t('form.sent') : t('form.send')}
+									{isLoading ? t('form.sending') : t('form.send')}
 									<Send className="w-4 h-4" />
 								</motion.button>
 							</div>
 						</form>
+						)}
+						</AnimatePresence>
 					</motion.div>
 				</div>
 			</div>

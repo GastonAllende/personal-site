@@ -10,7 +10,7 @@
   "Home": {
     "metadata": {
       "title": "Gaston Allende - Frontend-utvecklare",
-      "description": "Passionerad frontend-utvecklare med kunskaper inom backend och design. Över 10 års branscherfarenhet."
+      "description": "Passionerad frontend-utvecklare med kunskaper inom backend och design. Över 12 års branscherfarenhet."
     },
     "hero": {
       "title": "Frontend-utvecklare",
@@ -241,11 +241,13 @@
       "messagePlaceholder": "Berätta om ditt projekt...",
       "send": "Skicka meddelande",
       "sending": "Skickar...",
-      "sent": "Meddelande skickat!"
+      "sent": "Meddelande skickat!",
+      "successTitle": "Meddelande skickat!",
+      "successMessage": "Tack för att du hörde av dig. Jag återkommer så snart som möjligt."
     }
   },
   "Footer": {
-    "tagline": "Skapar enastående digitala upplevelser med passion och precision i över 10 år.",
+    "tagline": "Skapar enastående digitala upplevelser med passion och precision i över 12 år.",
     "navigation": "Navigation",
     "connect": "Kontakt",
     "home": "Hem",
