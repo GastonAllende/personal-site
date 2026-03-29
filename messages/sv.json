@@ -248,6 +248,7 @@
       "message": "Meddelande",
       "messagePlaceholder": "Berätta om ditt projekt...",
       "send": "Skicka meddelande",
+      "sending": "Skickar...",
       "sent": "Meddelande skickat!"
     }
   },

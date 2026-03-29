@@ -9,13 +9,14 @@ import { useTranslations } from 'next-intl';
 const socialLinks = [
 	{ icon: GithubIcon, label: 'GitHub', link: 'https://github.com/GastonAllende' },
 	{ icon: LinkedinIcon, label: 'LinkedIn', link: 'https://www.linkedin.com/in/gaston-allende-520b1734' },
-	{ icon: TwitterIcon, label: 'Twitter', link: 'https://twitter.com' },
 ];
 
 export function ContactContent() {
 	const t = useTranslations('Contact');
 	const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
 	const [submitted, setSubmitted] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState<string | null>(null);
 
 	const contactInfo = [
 		{
@@ -31,10 +32,31 @@ export function ContactContent() {
 		},
 	];
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
-		setSubmitted(true);
-		setTimeout(() => setSubmitted(false), 4000);
+		setIsLoading(true);
+		setError(null);
+
+		try {
+			const res = await fetch('/api/contact', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(formData),
+			});
+			const data = await res.json();
+
+			if (!res.ok) {
+				setError(data.error ?? 'Something went wrong. Please try again.');
+			} else {
+				setSubmitted(true);
+				setFormData({ name: '', email: '', subject: '', message: '' });
+				setTimeout(() => setSubmitted(false), 4000);
+			}
+		} catch {
+			setError('Network error. Please check your connection and try again.');
+		} finally {
+			setIsLoading(false);
+		}
 	};
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -200,13 +222,18 @@ export function ContactContent() {
 									/>
 								</div>
 
+								{error && (
+									<p className="text-sm text-red-500 dark:text-red-400">{error}</p>
+								)}
+
 								<motion.button
 									type="submit"
+									disabled={isLoading}
 									whileHover={{ scale: 1.02 }}
 									whileTap={{ scale: 0.98 }}
-									className="w-full py-4 bg-black dark:bg-white text-white dark:text-black rounded-2xl flex items-center justify-center gap-2 hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors font-medium"
+									className="w-full py-4 bg-black dark:bg-white text-white dark:text-black rounded-2xl flex items-center justify-center gap-2 hover:bg-gray-900 dark:hover:bg-gray-100 transition-colors font-medium disabled:opacity-60 disabled:cursor-not-allowed"
 								>
-									{submitted ? t('form.sent') : t('form.send')}
+									{isLoading ? t('form.sending') : submitted ? t('form.sent') : t('form.send')}
 									<Send className="w-4 h-4" />
 								</motion.button>
 							</div>

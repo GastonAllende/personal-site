@@ -10,11 +10,11 @@
   "Home": {
     "metadata": {
       "title": "Gaston Allende - Frontend Developer",
-      "description": "Passionate Frontend developer with a touch of backend and design skills. Over 10 years of industry experience."
+      "description": "Passionate Frontend developer with a touch of backend and design skills. Over 12 years of industry experience."
     },
     "hero": {
-      "title": "Frontend Developer",
-      "subtitle": "Creating visually appealing and intuitive digital experiences with over 12 years of expertise in the JavaScript ecosystem.",
+      "title": "Software Developer",
+      "subtitle": "Creating visually appealing and intuitive digital experiences with over 12 years of experience.",
       "viewProjects": "View Projects",
       "getInTouch": "Get in Touch"
     },
@@ -248,6 +248,7 @@
       "message": "Message",
       "messagePlaceholder": "Tell me about your project...",
       "send": "Send Message",
+      "sending": "Sending...",
       "sent": "Message Sent!"
     }
   },

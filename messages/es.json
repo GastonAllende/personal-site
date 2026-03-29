@@ -248,6 +248,7 @@
       "message": "Mensaje",
       "messagePlaceholder": "Contame sobre tu proyecto...",
       "send": "Enviar Mensaje",
+      "sending": "Enviando...",
       "sent": "¡Mensaje Enviado!"
     }
   },
