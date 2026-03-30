@@ -9,12 +9,12 @@
   },
   "Home": {
     "metadata": {
-      "title": "Gaston Allende - Desarrollador Frontend",
-      "description": "Desarrollador Frontend apasionado con conocimientos de backend y diseño. Más de 12 años de experiencia en la industria."
+      "title": "Gaston Allende - Desarrollador Fullstack",
+      "description": "Desarrollador frontend con más de 12 años de experiencia empresarial en Angular y TypeScript, ahora trabajando fullstack con C# y .NET."
     },
     "hero": {
-      "title": "Desarrollador Frontend / Fullstack",
-      "subtitle": "Creando experiencias digitales atractivas e intuitivas con más de 12 años de experiencia en el ecosistema JavaScript.",
+      "title": "Desarrollador Fullstack",
+      "subtitle": "Más de 12 años de experiencia frontend en Angular y TypeScript — ahora construyendo soluciones end-to-end con C# y .NET en el backend.",
       "viewProjects": "Ver Proyectos",
       "getInTouch": "Contactame"
     },
@@ -45,18 +45,18 @@
   "About": {
     "metadata": {
       "title": "Sobre Mí - Gaston Allende",
-      "description": "Conocé más sobre Gaston Allende, su trayectoria, experiencia y formación en desarrollo frontend."
+      "description": "Conocé más sobre Gaston Allende, experto en frontend con 12+ años en Angular y TypeScript, ahora expandiéndose al desarrollo fullstack con C# y .NET."
     },
     "hero": {
       "title": "Sobre Mí",
-      "subtitle": "Especialista en frontend con más de 12 años de experiencia construyendo aplicaciones empresariales, ahora expandiéndose hacia IA y Python"
+      "subtitle": "Experto en frontend con 12+ años en Angular y TypeScript — ahora construyendo soluciones fullstack con C# y .NET"
     },
     "bio": {
       "title": "Construyendo a Largo Plazo",
       "paragraphs": [
-        "Como desarrollador apasionado, me dedico a crear aplicaciones visualmente atractivas e intuitivas con una experiencia de usuario sólida. Cuento con amplia experiencia en el ecosistema JavaScript y me mantengo continuamente actualizado a través de cursos y talleres en plataformas como Udemy y Frontend Masters.",
-        "Tengo un ojo agudo para los detalles y construyo interfaces amigables con código limpio y fácil de mantener — algo que considero clave para proyectos sostenibles a largo plazo.",
-        "Actualmente trabajo en el sector financiero como desarrollador fullstack, y recientemente comencé a explorar la IA y la IA generativa, aprendiendo Python y construyendo conocimiento donde convergen el frontend, el backend y la inteligencia artificial."
+        "Con más de 12 años en el ecosistema JavaScript — especializado en Angular y TypeScript — construyo aplicaciones bien estructuradas y escalables que funcionan en entornos de producción exigentes. He liderado equipos de frontend, impulsado decisiones de arquitectura y tecnología, y colaborado estrechamente con diseñadores UX y desarrolladores backend en entornos empresariales complejos.",
+        "Tengo un ojo agudo para los detalles y construyo interfaces amigables con código limpio y fácil de mantener — algo que considero clave para proyectos sostenibles a largo plazo. Me mantengo actualizado a través de FrontendMasters y DataCamp, explorando continuamente nuevas herramientas y técnicas.",
+        "Trabajo en el sector financiero como desarrollador fullstack, construyendo sistemas en producción con Angular y TypeScript en el frontend y C# con .NET en el backend. También me estoy expandiendo hacia la IA — aplicando prompt engineering e IA generativa para mejorar flujos de trabajo y construir herramientas más inteligentes."
       ],
       "yearsExperience": "Años de Experiencia"
     },
@@ -217,7 +217,7 @@
   "Contact": {
     "metadata": {
       "title": "Contacto - Gaston Allende",
-      "description": "Ponete en contacto con Gaston Allende para oportunidades de desarrollo frontend y colaboraciones."
+      "description": "Poneté en contacto con Gaston Allende para oportunidades de desarrollo fullstack y colaboraciones."
     },
     "header": {
       "title": "Ponete en Contacto",

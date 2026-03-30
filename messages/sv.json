@@ -9,12 +9,12 @@
   },
   "Home": {
     "metadata": {
-      "title": "Gaston Allende - Frontend-utvecklare",
-      "description": "Passionerad frontend-utvecklare med kunskaper inom backend och design. Över 12 års branscherfarenhet."
+      "title": "Gaston Allende - Fullstackutvecklare",
+      "description": "Frontend-utvecklare med 12+ års företagserfarenhet inom Angular och TypeScript, nu med fullstack-ansvar i C# och .NET."
     },
     "hero": {
-      "title": "Frontend-utvecklare",
-      "subtitle": "Skapar visuellt tilltalande och intuitiva digitala upplevelser med över 12 års erfarenhet inom JavaScript-ekosystemet.",
+      "title": "Fullstackutvecklare",
+      "subtitle": "12+ års frontend-expertis inom Angular och TypeScript — bygger nu helhetslösningar med C# och .NET på backend.",
       "viewProjects": "Se projekt",
       "getInTouch": "Kontakta mig"
     },
@@ -45,18 +45,18 @@
   "About": {
     "metadata": {
       "title": "Om mig - Gaston Allende",
-      "description": "Läs mer om Gaston Allende, hans bakgrund, erfarenhet och utbildning inom frontend-utveckling."
+      "description": "Läs mer om Gaston Allende, frontend-expert med 12+ års erfarenhet inom Angular och TypeScript, nu med fullstack-utveckling i C# och .NET."
     },
     "hero": {
       "title": "Om mig",
-      "subtitle": "Frontend-specialist med 12+ års erfarenhet av att bygga företagsapplikationer, nu med fokus på AI och Python"
+      "subtitle": "Frontend-expert med 12+ års erfarenhet inom Angular och TypeScript — bygger nu fullstack-lösningar med C# och .NET"
     },
     "bio": {
       "title": "Bygger för framtiden",
       "paragraphs": [
-        "Som engagerad utvecklare brinner jag för att skapa visuellt tilltalande och intuitiva applikationer med stark användarupplevelse. Jag har bred erfarenhet av JavaScript-ekosystemet och håller mig kontinuerligt uppdaterad genom kurser och workshops på Udemy och Frontend Masters.",
-        "Jag har ett skarpt öga för detaljer och skapar användarvänliga gränssnitt med ren, lättunderhållen kod — något jag ser som nyckeln till långsiktigt hållbara projekt.",
-        "Idag arbetar jag inom finanssektorn som fullstack-utvecklare, och jag har nyligen börjat utforska AI och generativ AI, lär mig Python och bygger gradvis kunskap där frontend, backend och AI möts."
+        "Med 12+ års erfarenhet inom JavaScript-ekosystemet — specialiserad på Angular och TypeScript — bygger jag välstrukturerade, skalbara applikationer som håller i produktionsmiljö. Jag har erfarenhet av att leda frontend-team, driva arkitektur- och teknikbeslut samt samarbeta nära med UX-designers och backendutvecklare i komplexa företagsmiljöer.",
+        "Jag har ett skarpt öga för detaljer och skapar användarvänliga gränssnitt med ren, lättunderhållen kod — något jag ser som nyckeln till långsiktigt hållbara projekt. Jag håller mig uppdaterad genom FrontendMasters och DataCamp samt löpande utforskning av nya verktyg och tekniker.",
+        "Jag arbetar inom finanssektorn som fullstack-utvecklare och bygger produktionssystem med Angular och TypeScript på frontend och C# med .NET på backend. Jag har också börjat utforska AI — och tillämpar prompt engineering och generativ AI för att effektivisera arbetsflöden och bygga smartare verktyg."
       ],
       "yearsExperience": "Års erfarenhet"
     },
@@ -177,47 +177,47 @@
     "liveDemo": "Live-demo",
     "items": [
       {
-        "title": "E-handelsplattform",
-        "category": "Webbutveckling",
-        "description": "En modern e-handelslösning med realtidslager",
-        "fullDescription": "Byggde en omfattande e-handelsplattform med realtidshantering av lager, säker betalningshantering och en intuitiv administratörspanel. Plattformen hanterar tusentals transaktioner dagligen med 99,9 % drifttid."
-      },
-      {
-        "title": "Designsystem",
-        "category": "UI/UX-design",
-        "description": "Omfattande designsystem för företagsapplikationer",
-        "fullDescription": "Skapade ett skalbart designsystem som används i flera produkter, med 100+ komponenter, omfattande dokumentation och riktlinjer för tillgänglighet. Minskade tiden från design till utveckling med 40 %."
-      },
-      {
-        "title": "Analyspanel",
-        "category": "Datavisualisering",
-        "description": "Realtidsanalys med interaktiva visualiseringar",
-        "fullDescription": "Byggde en avancerad analyspanel som bearbetar miljontals datapunkter i realtid. Innehåller anpassningsbara widgets, automatiserad rapportering och prediktiv analys driven av moderna algoritmer."
-      },
-      {
-        "title": "Social plattform",
+        "title": "Bankkundportal",
         "category": "Fullstack",
-        "description": "Nästa generations sociala nätverksupplevelse",
-        "fullDescription": "Lanserade en social medieplattform med innovativa funktioner inklusive AI-drivna innehållsrekommendationer, livestreaming och avancerade integritetskontroller. Skalades för att stödja 50 000+ samtidiga användare."
+        "description": "Företagswebportal för bankkunder byggd med Angular och C# .NET",
+        "fullDescription": "Utvecklade en säker och skalbar bankkundportal för kontohantering, transaktionshistorik och interna verktyg. Byggd med Angular och TypeScript på frontend, med ett C# .NET REST API och SQL Server i backend. Integrerad med Azure DevOps CI/CD och driftsatt på Azure."
       },
       {
-        "title": "Mobilbankapp",
-        "category": "Mobilutveckling",
-        "description": "Säker mobilbank med biometrisk autentisering",
-        "fullDescription": "Utvecklade en funktionsrik mobilbankapplikation med avancerade säkerhetsfunktioner inklusive biometrisk autentisering, krypterade transaktioner och bedrägeridetektering i realtid."
+        "title": "Enterprise Angular-designsystem",
+        "category": "Frontend",
+        "description": "Skalbart Angular-komponentbibliotek och designsystem för företagsteam",
+        "fullDescription": "Arkitekterade och byggde ett återanvändbart Angular-komponentbibliotek med 80+ komponenter, fullständiga TypeScript-typer och RxJS/NGRX-baserade tillståndsmönster. Dokumenterat med Storybook och använt av flera produktteam, vilket kraftigt minskade UI-utvecklingstiden."
       },
       {
-        "title": "Komponentbibliotek",
-        "category": "Öppen källkod",
-        "description": "Återanvändbart React-komponentbibliotek med fullt TypeScript-stöd",
-        "fullDescription": "Utvecklade och publicerade ett React-komponentbibliotek med öppen källkod, fullt TypeScript-stöd, omfattande dokumentation och en Storybook-playground. Används av flera team i olika projekt."
+        "title": "Dashboard för vatteninfrastruktur",
+        "category": "Frontend",
+        "description": "Realtidswebb för övervakning och konfiguration av vattenpumpstationer",
+        "fullDescription": "Ledde frontendutvecklingen av en komplex webbapplikation för att fjärrstyra och konfigurera vattenpumpstationer i Sverige och Europa. Byggd med Angular och TypeScript med WebSockets för realtidstelemetri. Ledde ett team om tre frontendutvecklare, definierade komponentarkitektur och samarbetade nära med UX-designers och distribuerade backendutvecklare."
+      },
+      {
+        "title": "REST API-plattform",
+        "category": "Backend",
+        "description": "Skalbar C# .NET REST API, containeriserad med Docker och driftsatt på Azure",
+        "fullDescription": "Designade och implementerade ett skiktat RESTful API i C# och .NET enligt clean architecture-principer. Inkluderar JWT-autentisering, SQL Server-integration via Entity Framework, Docker-containerisering och Azure-driftsättning. Har ettövergripande Swagger-dokumentation, strukturerad loggning och global felhantering."
+      },
+      {
+        "title": "Realtidsdashboard för analys",
+        "category": "Fullstack",
+        "description": "Analyspanel med realtidsuppdateringar via SignalR och WebSockets",
+        "fullDescription": "Byggde en fullstack-analyspanel med ett Angular-frontend som konsumerar realtidsdata via SignalR från ett C# .NET-backend. Funktioner inkluderar konfigurerbara datavyer, historiska trenddiagram och rollbaserad åtkomstkontroll. SQL Server för persistens, Docker för containerisering och Azure för driftsättning."
+      },
+      {
+        "title": "AI-integrationstjänst",
+        "category": "AI-integration",
+        "description": "C# .NET-tjänst som integrerar OpenAI APIs för intelligent dokumenthantering",
+        "fullDescription": "Byggde en backend-tjänst i C# .NET som kopplar ihop företagsarbetsflöden med OpenAI:s API för intelligent dokumenthantering, textsåmmandragning och prompt-driven automatisering. Använder prompt engineering-tekniker och integreras med befintliga .NET-tjänster via REST."
       }
     ]
   },
   "Contact": {
     "metadata": {
       "title": "Kontakt - Gaston Allende",
-      "description": "Kontakta Gaston Allende för möjligheter inom frontend-utveckling och samarbeten."
+      "description": "Kontakta Gaston Allende för möjligheter inom fullstack-utveckling och samarbeten."
     },
     "header": {
       "title": "Hör av dig",

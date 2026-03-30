@@ -9,12 +9,12 @@
   },
   "Home": {
     "metadata": {
-      "title": "Gaston Allende - Frontend Developer",
-      "description": "Passionate Frontend developer with a touch of backend and design skills. Over 12 years of industry experience."
+      "title": "Gaston Allende - Fullstack Developer",
+      "description": "Frontend developer with 12+ years of enterprise experience in Angular and TypeScript, now working fullstack with C# and .NET."
     },
     "hero": {
-      "title": "Software Developer",
-      "subtitle": "Creating visually appealing and intuitive digital experiences with over 12 years of experience.",
+      "title": "Fullstack Developer",
+      "subtitle": "12+ years of frontend expertise in Angular and TypeScript — now building end-to-end solutions with C# and .NET on the backend.",
       "viewProjects": "View Projects",
       "getInTouch": "Get in Touch"
     },
@@ -45,18 +45,18 @@
   "About": {
     "metadata": {
       "title": "About - Gaston Allende",
-      "description": "Learn more about Gaston Allende, his background, experience, and education in frontend development."
+      "description": "Learn more about Gaston Allende, frontend expert with 12+ years in Angular and TypeScript, now expanding into fullstack with C# and .NET."
     },
     "hero": {
       "title": "About Me",
-      "subtitle": "Frontend specialist with 12+ years of experience building enterprise applications, now expanding into AI and Python"
+      "subtitle": "Frontend expert with 12+ years in Angular and TypeScript — now building fullstack solutions with C# and .NET"
     },
     "bio": {
       "title": "Building for the Long Term",
       "paragraphs": [
-        "As a passionate developer, I thrive on creating visually appealing and intuitive applications with strong user experiences. With broad experience across the JavaScript ecosystem, I stay continuously up to date through courses and workshops on platforms like Udemy and Frontend Masters.",
-        "I have a keen eye for detail and build user-friendly interfaces with clean, maintainable code — something I see as the key to sustainable, long-term projects.",
-        "Today, I work in the financial sector as a fullstack developer, and I've recently started exploring AI and generative AI, learning Python and gradually building knowledge where frontend, backend, and AI intersect."
+        "With 12+ years in the JavaScript ecosystem — specialized in Angular and TypeScript — I build well-structured, scalable applications that hold up in production. I've led frontend teams, driven architecture and technology decisions, and collaborated closely with UX designers and backend developers across complex enterprise environments.",
+        "I have a keen eye for detail and build user-friendly interfaces with clean, maintainable code — something I see as the key to sustainable, long-term projects. I stay sharp through FrontendMasters and DataCamp alongside hands-on exploration of new tools and techniques.",
+        "I work in the financial sector as a fullstack developer, building production systems with Angular and TypeScript on the frontend and C# with .NET on the backend. I've also been expanding into AI — applying prompt engineering and generative AI to improve developer workflows and build smarter tools."
       ],
       "yearsExperience": "Years Experience"
     },
@@ -177,47 +177,47 @@
     "liveDemo": "Live Demo",
     "items": [
       {
-        "title": "E-Commerce Platform",
-        "category": "Web Development",
-        "description": "A modern e-commerce solution with real-time inventory",
-        "fullDescription": "Built a comprehensive e-commerce platform featuring real-time inventory management, secure payment processing, and an intuitive admin dashboard. The platform handles thousands of transactions daily with 99.9% uptime."
+        "title": "Banking Customer Portal",
+        "category": "Fullstack",
+        "description": "Enterprise banking web portal built with Angular and C# .NET",
+        "fullDescription": "Developed a secure, scalable banking customer portal handling account management, transaction history, and internal tooling. Built with Angular and TypeScript on the frontend, backed by a C# .NET REST API and SQL Server. Integrated with Azure DevOps CI/CD pipelines and deployed on Azure."
       },
       {
-        "title": "Design System",
-        "category": "UI/UX Design",
-        "description": "Comprehensive design system for enterprise applications",
-        "fullDescription": "Created a scalable design system used across multiple products, featuring 100+ components, comprehensive documentation, and accessibility guidelines. Reduced design-to-development time by 40%."
+        "title": "Enterprise Angular Design System",
+        "category": "Frontend",
+        "description": "Scalable Angular component library and design system for enterprise teams",
+        "fullDescription": "Architected and built a reusable Angular component library with 80+ components, full TypeScript typings, and RxJS/NGRX-based state management patterns. Documented with Storybook and adopted across multiple product teams, significantly reducing UI development time and enforcing consistent UX standards."
       },
       {
-        "title": "Analytics Dashboard",
-        "category": "Data Visualization",
-        "description": "Real-time analytics with interactive visualizations",
-        "fullDescription": "Built an advanced analytics dashboard processing millions of data points in real-time. Features customizable widgets, automated reporting, and predictive analytics powered by modern algorithms."
+        "title": "Water Infrastructure Dashboard",
+        "category": "Frontend",
+        "description": "Real-time web app for monitoring and configuring water pump stations",
+        "fullDescription": "Led frontend development of a complex web application used to remotely control and configure water pump stations across Sweden and Europe. Built with Angular and TypeScript, using WebSockets for real-time telemetry data. Led a team of three frontend developers, defined component architecture, and collaborated closely with UX designers and distributed backend teams."
       },
       {
-        "title": "Social Platform",
-        "category": "Full Stack",
-        "description": "Next-generation social networking experience",
-        "fullDescription": "Launched a social media platform with innovative features including AI-powered content recommendations, live streaming, and advanced privacy controls. Scaled to support 50,000+ concurrent users."
+        "title": "REST API Platform",
+        "category": "Backend",
+        "description": "Scalable C# .NET REST API, containerized with Docker and deployed on Azure",
+        "fullDescription": "Designed and implemented a layered RESTful API in C# and .NET following clean architecture principles. Includes JWT authentication, SQL Server integration via Entity Framework, Docker containerization, and Azure deployment. Features comprehensive Swagger documentation, structured logging, and global error handling."
       },
       {
-        "title": "Mobile Banking App",
-        "category": "Mobile Development",
-        "description": "Secure mobile banking with biometric authentication",
-        "fullDescription": "Developed a feature-rich mobile banking application with advanced security features including biometric authentication, encrypted transactions, and real-time fraud detection."
+        "title": "Real-time Analytics Dashboard",
+        "category": "Fullstack",
+        "description": "Data analytics dashboard with live updates via SignalR and WebSockets",
+        "fullDescription": "Built a fullstack analytics dashboard with an Angular frontend consuming real-time data pushed via SignalR from a C# .NET backend. Features configurable data views, historical trend charts, and role-based access control. SQL Server for persistence, Docker for containerization, and Azure for deployment."
       },
       {
-        "title": "Component Library",
-        "category": "Open Source",
-        "description": "Reusable React component library with full TypeScript support",
-        "fullDescription": "Developed and published an open-source React component library with full TypeScript support, comprehensive documentation, and a Storybook playground. Used by multiple teams across different projects."
+        "title": "AI Integration Service",
+        "category": "AI Integration",
+        "description": "C# .NET service integrating OpenAI APIs for intelligent document processing",
+        "fullDescription": "Built a backend service in C# .NET that connects enterprise workflows with OpenAI's API for intelligent document processing, text summarization, and prompt-driven automation. Applied prompt engineering techniques and integrated with existing .NET services via REST. Combines fullstack backend experience with applied generative AI."
       }
     ]
   },
   "Contact": {
     "metadata": {
       "title": "Contact - Gaston Allende",
-      "description": "Get in touch with Gaston Allende for frontend development opportunities and collaborations."
+      "description": "Get in touch with Gaston Allende for fullstack development opportunities and collaborations."
     },
     "header": {
       "title": "Get In Touch",
