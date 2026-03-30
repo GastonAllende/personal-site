@@ -5,6 +5,7 @@ import { Mail, ArrowUp } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './BrandIcons';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
+import { useMemo } from 'react';
 
 const socialLinks = [
   { icon: GithubIcon, label: 'GitHub', url: 'https://github.com/GastonAllende' },
@@ -12,27 +13,27 @@ const socialLinks = [
   { icon: Mail, label: 'Email', url: 'mailto:gaston.saavedra@me.com' },
 ];
 
+const connectLinks = [
+  { label: 'GitHub', url: 'https://github.com/GastonAllende' },
+  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/gaston-allende-520b1734' },
+  { label: 'Email', url: 'mailto:gaston.saavedra@me.com' },
+];
+
 const Footer: React.FC = () => {
   const t = useTranslations('Footer');
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
-  const navLinks = [
+  const navLinks = useMemo(() => [
     { label: t('home'), path: '/' as const },
     { label: t('about'), path: '/about' as const },
     { label: t('projects'), path: '/projects' as const },
     { label: t('contact'), path: '/contact' as const },
-  ];
+  ], [t]);
 
-  const connectLinks = [
-    { label: 'GitHub', url: 'https://github.com/GastonAllende' },
-    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/gaston-allende-520b1734' },
-    { label: 'Email', url: 'mailto:gaston.saavedra@me.com' },
-  ];
-
-  const footerSections = [
+  const footerSections = useMemo(() => [
     { title: t('navigation'), links: navLinks },
     { title: t('connect'), links: connectLinks },
-  ];
+  ], [t, navLinks]);
 
   return (
     <footer className="relative bg-linear-to-br from-gray-900 via-black to-gray-900 text-white">

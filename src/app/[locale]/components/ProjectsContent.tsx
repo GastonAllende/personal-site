@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'motion/react';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { X, ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import { GithubIcon } from './BrandIcons';
@@ -63,10 +63,10 @@ export function ProjectsContent() {
 		fullDescription: string;
 	}>;
 
-	const projects: Project[] = translatedItems.map((item, i) => ({
-		...item,
-		...projectMeta[i],
-	}));
+	const projects: Project[] = useMemo(
+		() => translatedItems.map((item, i) => ({ ...item, ...projectMeta[i] })),
+		[translatedItems]
+	);
 
 	const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
@@ -101,13 +101,15 @@ export function ProjectsContent() {
 							className="group cursor-pointer"
 						>
 							<div className="rounded-3xl overflow-hidden bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 hover:shadow-xl dark:hover:shadow-gray-900/50 transition-all duration-300">
-								<div className="aspect-4/3 overflow-hidden bg-gray-100 dark:bg-gray-700">
-									<motion.img
+								<div className="relative aspect-4/3 overflow-hidden bg-gray-100 dark:bg-gray-700">
+									<MotionImage
 										whileHover={{ scale: 1.05 }}
 										transition={{ duration: 0.4 }}
 										src={project.image}
 										alt={project.title}
-										className="w-full h-full object-cover"
+										fill
+										sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+										className="object-cover"
 									/>
 								</div>
 								<div className="p-6">
@@ -174,6 +176,7 @@ export function ProjectsContent() {
 											src={selectedProject.image}
 											alt={selectedProject.title}
 											fill
+											sizes="(max-width: 768px) 100vw, 50vw"
 											className="object-cover"
 										/>
 									</div>

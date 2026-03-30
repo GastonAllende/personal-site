@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence, useScroll, useSpring } from 'motion/react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { Sun, Moon, Menu, X, Globe } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 import { Link } from '@/i18n/navigation';
@@ -26,12 +26,12 @@ const Navbar: React.FC = () => {
 	const [langMenuOpen, setLangMenuOpen] = useState(false);
 	const { theme, toggleTheme } = useTheme();
 
-	const navItems = [
+	const navItems = useMemo(() => [
 		{ path: '/' as const, label: t('home') },
 		{ path: '/about' as const, label: t('about') },
 		{ path: '/projects' as const, label: t('projects') },
 		{ path: '/contact' as const, label: t('contact') },
-	];
+	], [t]);
 
 	const { scrollYProgress } = useScroll();
 	const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
@@ -43,7 +43,10 @@ const Navbar: React.FC = () => {
 	}, []);
 
 	// Strip locale prefix from pathname for active link matching
-	const pathnameWithoutLocale = pathname.replace(new RegExp(`^/${locale}`), '') || '/';
+	const pathnameWithoutLocale = useMemo(
+		() => pathname.replace(new RegExp(`^/${locale}`), '') || '/',
+		[pathname, locale]
+	);
 
 	const switchLocale = (newLocale: string) => {
 		router.replace(pathnameWithoutLocale as '/', { locale: newLocale });
