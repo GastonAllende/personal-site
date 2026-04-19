@@ -14,19 +14,20 @@ import { notFound } from 'next/navigation';
 export const metadata: Metadata = {
 	metadataBase: new URL('https://gastonallende.com'),
 	title: {
-		default: 'Gaston Allende - Frontend Developer',
+		default: 'Gaston Allende - Fullstack Developer',
 		template: '%s | Gaston Allende',
 	},
 	description:
-		'Passionate Frontend developer with over 10 years of experience in building web applications with modern technologies.',
-	keywords: ['Frontend Developer', 'React', 'Next.js', 'TypeScript', 'Web Development'],
+		'Fullstack developer with 12+ years of enterprise experience in Angular and TypeScript, now working fullstack with C# and .NET.',
+	keywords: ['Fullstack Developer', 'Angular', 'TypeScript', 'C#', '.NET', 'Web Development'],
 	authors: [{ name: 'Gaston Allende' }],
 	creator: 'Gaston Allende',
 	openGraph: {
 		type: 'website',
 		locale: 'en_US',
-		title: 'Gaston Allende - Frontend Developer',
-		description: 'Passionate Frontend developer with over 10 years of experience',
+		title: 'Gaston Allende - Fullstack Developer',
+		description:
+			'Fullstack developer with 12+ years of enterprise experience in Angular, TypeScript, C#, and .NET.',
 		siteName: 'Gaston Allende Portfolio',
 	},
 };
@@ -40,7 +41,7 @@ export default async function LocaleLayout({
 	params,
 }: {
 	children: React.ReactNode;
-	params: Promise<{ locale: string }>;
+	params: Promise<{ locale: string; }>;
 }) {
 	const { locale } = await params;
 
