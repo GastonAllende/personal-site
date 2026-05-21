@@ -8,12 +8,12 @@ export async function POST(req: NextRequest) {
   const { name, email, subject, message } = body;
 
   if (!name || !email || !subject || !message) {
-    return NextResponse.json({ error: 'All fields are required.' }, { status: 400 });
+    return NextResponse.json({ error: 'ALL_FIELDS_REQUIRED' }, { status: 400 });
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    return NextResponse.json({ error: 'Invalid email address.' }, { status: 400 });
+    return NextResponse.json({ error: 'INVALID_EMAIL' }, { status: 400 });
   }
 
   const { error } = await resend.emails.send({
@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
 
   if (error) {
     console.error('[contact] Resend error:', error);
-    return NextResponse.json({ error: 'Failed to send email. Please try again.' }, { status: 500 });
+    return NextResponse.json({ error: 'SEND_FAILED' }, { status: 500 });
   }
 
   return NextResponse.json({ success: true });

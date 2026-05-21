@@ -46,13 +46,18 @@ export function ContactContent() {
 			const data = await res.json();
 
 			if (!res.ok) {
-				setError(data.error ?? 'Something went wrong. Please try again.');
+				const errorMessages: Record<string, string> = {
+					ALL_FIELDS_REQUIRED: t('form.errorAllFieldsRequired'),
+					INVALID_EMAIL: t('form.errorInvalidEmail'),
+					SEND_FAILED: t('form.errorSendFailed'),
+				};
+				setError(errorMessages[data.error] ?? t('form.errorUnknown'));
 			} else {
 				setSubmitted(true);
 				setFormData({ name: '', email: '', subject: '', message: '' });
 			}
 		} catch {
-			setError('Network error. Please check your connection and try again.');
+			setError(t('form.errorNetwork'));
 		} finally {
 			setIsLoading(false);
 		}

@@ -243,7 +243,12 @@
       "sending": "Enviando...",
       "sent": "¡Mensaje Enviado!",
       "successTitle": "¡Mensaje enviado!",
-      "successMessage": "Gracias por escribirme. Te responderé lo antes posible."
+      "successMessage": "Gracias por escribirme. Te responderé lo antes posible.",
+      "errorAllFieldsRequired": "Todos los campos son obligatorios.",
+      "errorInvalidEmail": "Dirección de email inválida.",
+      "errorSendFailed": "No se pudo enviar el mensaje. Por favor, intentá de nuevo.",
+      "errorNetwork": "Error de red. Verificá tu conexión e intentá de nuevo.",
+      "errorUnknown": "Algo salió mal. Por favor, intentá de nuevo."
     }
   },
   "Footer": {

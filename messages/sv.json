@@ -243,7 +243,12 @@
       "sending": "Skickar...",
       "sent": "Meddelande skickat!",
       "successTitle": "Meddelande skickat!",
-      "successMessage": "Tack för att du hörde av dig. Jag återkommer så snart som möjligt."
+      "successMessage": "Tack för att du hörde av dig. Jag återkommer så snart som möjligt.",
+      "errorAllFieldsRequired": "Alla fält är obligatoriska.",
+      "errorInvalidEmail": "Ogiltig e-postadress.",
+      "errorSendFailed": "Det gick inte att skicka meddelandet. Försök igen.",
+      "errorNetwork": "Nätverksfel. Kontrollera din anslutning och försök igen.",
+      "errorUnknown": "Något gick fel. Försök igen."
     }
   },
   "Footer": {

@@ -243,7 +243,12 @@
       "sending": "Sending...",
       "sent": "Message Sent!",
       "successTitle": "Message sent!",
-      "successMessage": "Thank you for reaching out. I'll get back to you as soon as possible."
+      "successMessage": "Thank you for reaching out. I'll get back to you as soon as possible.",
+      "errorAllFieldsRequired": "All fields are required.",
+      "errorInvalidEmail": "Invalid email address.",
+      "errorSendFailed": "Failed to send message. Please try again.",
+      "errorNetwork": "Network error. Please check your connection and try again.",
+      "errorUnknown": "Something went wrong. Please try again."
     }
   },
   "Footer": {
